@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ META.project_title}} | The Texas Tribune</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% include 'includes/_social_meta.html' %}
+  <link rel="shortcut icon" type="image/x-icon" href="//s3.amazonaws.com/static.texastribune.org/common/images/favicon.ico">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  {% block styles %}
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+  {% endblock %}
+</head>
+<body>
+  <header class="masthead app-bar promote-layer">
+    <div class="container menu-container">
+      <div class="branding">
+        <div id="menu-button" class="menu-icon home"><span></span></a></div>
+        <!-- <a href="//www.texastribune.org/"><img class="trib-logo desktop" alt="The Texas Tribune" src="http://s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-logo-white500x55.png"></a>
+        <span class="sub-text"> | </span> -->
+        <a href="//www.statesman.com"><img class="statesman-logo desktop" alt="The Austin American-Statesman" src="assets/images/tt-statesman.svg"></a>
+      </div>
+    </div>
+    {% block nav %}{% endblock %}
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <div class="story-container">
+    <div class="story-content prose info">
+      <h3>About</h3>
+      <p>{{ META.about }}</p>
+      <h3>Contributors</h3>
+      <h4>The Texas Tribune</h4>
+      <ul>
+        <li>
+          <p><strong><a href="mailto:jroot@texastribune.org">Jay Root</a></strong></p>
+          <p class="handle">Reporter | <a href="https://twitter.com/byjayroot" target="_blank">@byjayroot</a></p>
+        </li>
+        <li>
+          <p><strong><a href="mailto:jmccullough@texastribune.org">Jolie McCullough</a></strong></p>
+          <p class="handle">News Apps Developer | <a href="https://twitter.com/jsmccullou" target="_blank">@jsmccullou</a></p>
+        </li>
+      </ul>
+      <h4>Austin American-Statesman</h4>
+      <ul>
+      </ul>
+    </div>
+  </div>
+  <!-- <div class="ad-container banner-ad bottom" id="div-gpt-ad-1406570316312-2">
+    <script>
+      googletag.cmd.push(function() {
+        googletag.display('div-gpt-ad-1406570316312-2');
+      });
+    </script>
+  </div> -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <a href="https://twitter.com/newsapps"><img class="logo" src="//s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-NewsApps-yellow.svg" alt="Texas Tribune News Apps logo, links to News Apps' Twitter account"></a>
+      </div>
+      <div>
+        <ul>
+          <li><a href="http://www.facebook.com/texastribune"><i class="icon fa-facebook-square"></i>Facebook</a></li>
+          <li><a href="http://twitter.com/TexasTribune"><i class="icon fa-twitter-square"></i>Twitter</a></li>
+          <li><a href="http://www.youtube.com/user/thetexastribune"><i class="icon fa-youtube-play"></i>YouTube</a></li>
+          <li><a href="http://instagram.com/texas_tribune"><i class="icon fa-instagram"></i>Instagram</a></li>
+          <li><a href="http://www.linkedin.com/company/texas-tribune"><i class="icon fa-linkedin-square"></i>LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="internal-links">
+        <ul>
+        <li><a href="http://www.texastribune.org/about/">About Us</a></li>
+        <li><a href="http://www.texastribune.org/support-us/donors-and-members/">Who Funds Us?</a></li>
+        <li><a href="http://www.texastribune.org/terms-of-service/">Terms of Service</a></li>
+        <li><a href="http://www.texastribune.org/ethics/">Code of Ethics</a></li>
+        <li><a href="http://www.texastribune.org/privacy/">Privacy Policy</a></li>
+        <li><a href="http://www.texastribune.org/corrections/">Corrections</a></li>
+        <li><a href="https://www.texastribune.org/join/" class="donate-link">Donate</a></li>
+      </ul>
+      </div>
+      <div class="donate">
+        <ul>
+          <li>Nonpartisan.</li>
+          <li>Nonprofit.</li>
+          <li>Statewide.</li>
+          <a href="https://www.texastribune.org/join/"><li>Join Us</li></a>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+{% block script %}
+<script src="scripts/main.js"></script>
+{% endblock %}
+{% include 'includes/_google_analytics.html' %}
+</body>
+</html>

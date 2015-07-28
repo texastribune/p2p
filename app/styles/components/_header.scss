@@ -1,0 +1,71 @@
+
+$med-header: new-breakpoint(max-width 560px);
+$small-header: new-breakpoint(max-width 450px);
+
+.masthead {
+  .branding {
+    padding: .5em 0;
+
+    .sub-text {
+      color: $white;
+      display: inline;
+      line-height: .7em;
+      vertical-align: text-top;
+
+      @include media($med-header) {
+        line-height: 0;
+      }
+
+      @include media($small-header) {
+        display: none;
+      }
+
+      @include media($default-desktop) {
+        font-size: 1.25em;
+        line-height: .3em;
+      }
+    }
+
+    a {
+      margin: 0;
+      padding: 0;
+
+      @include media($small-header) {
+        float: left;
+      }
+    }
+
+    .trib-logo {
+      height: 1.1em;
+
+      @include media($default-desktop) {
+        height: 1.25em;
+      }
+
+      @include media($small-header) {
+        margin-bottom: .25em;
+      }
+    }
+
+    .statesman-logo {
+      height: 1.5em;
+
+      @include media($default-desktop) {
+        height: 1.75em;
+      }
+    }
+
+    img {
+      padding: 0 .4em;
+
+      @include media($med-header) {
+        margin: .3em 0;
+      }
+
+      @include media($small-header) {
+        display: block;
+        margin: 0;
+      }
+    }
+  }
+}
