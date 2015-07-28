@@ -1,6 +1,63 @@
 $nav-bp: new-breakpoint(min-width 900px);
 $selected-li: #99d0d3;
 
+.menu-icon {
+  cursor: pointer;
+  display: block;
+  float: right;
+  margin-top: -1em;
+  padding: 2em 1em 1.5em;
+
+  @include media($small-header) {
+    margin-left: 2em;
+    padding: 2em 1em;
+  }
+
+  @include media($default-desktop) {
+    display: none;
+  }
+
+  &.x {
+    background-color: $selected-li;
+
+    &.home {
+      background-color: $href-teal;
+    }
+  }
+
+  span {
+    background-color: $white;
+    display: block;
+    height: .2em;
+    margin: 0 auto;
+    position: relative;
+    transition-delay: .2s;
+    transition-duration: 0;
+    width: 1.75em;
+
+    &:before,
+    &:after {
+      background-color: $white;
+      content: '';
+      display: block;
+      height: .2em;
+      position: absolute;
+      transition-delay: .2s, 0;
+      transition-duration: .2s;
+      transition-property: margin, transform;
+      width: 1.75em;
+    }
+
+    &:before {
+      margin-top: -.5em;
+    }
+
+    &:after {
+      margin-top: .5em;
+    }
+  }
+}
+
 .menu {
   background-color: $white;
   display: none;

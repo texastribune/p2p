@@ -15,7 +15,42 @@
 {% endblock %}
 
 {% block content %}
-Hello world!
+  <h2 class="headline">{{ WORKERS.headline }}</h2>
+  <section class="meta prose">
+    <span class="byline">By <a href="{{ WORKERS.byline_url }}">{{ WORKERS.byline }}</a></span>
+    &nbsp;|&nbsp;
+    <span class="date">{{WORKERS.date }}</span>
+  </section>
+  <!-- <div class="sharelines">
+    <ul>
+      <li>
+        <a href="https://twitter.com/intent/tweet?text={{ WORKERS.shareline_1 | urlencode }}%20http%3A%2F%2Fapps.texastribune.org%2Fblood-lessons%2F{{ WORKERS.slug }}&via=texastribune" title="share on Twitter" class="social-share" target="_blank">
+        <i class="fa fa-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fapps.texastribune.org%2Fblood-lessons%2F{{ WORKERS.slug }}&redirect_uri=http%3A%2F%2Fapps.texastribune.org%2Fblood-lessons%2F{{ WORKERS.slug }}" title="share on Facebook" class="social-share" target="_blank">
+        <i class="fa fa-facebook"></i>
+        </a>
+        <p>{{ WORKERS.shareline_1 }}</p>
+      </li>
+      <li>
+        <a href="https://twitter.com/intent/tweet?text={{ WORKERS.shareline_2 | urlencode }}%20http%3A%2F%2Fapps.texastribune.org%2Fblood-lessons%2F{{ WORKERS.slug }}&via=texastribune" title="share on Twitter" class="social-share" target="_blank">
+        <i class="fa fa-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fapps.texastribune.org%2Fblood-lessons%2F{{ WORKERS.slug }}&redirect_uri=http%3A%2F%2Fapps.texastribune.org%2Fblood-lessons%2F{{ WORKERS.slug }}" title="share on Facebook" class="social-share" target="_blank">
+        <i class="fa fa-facebook"></i>
+        </a>
+        <p>{{ WORKERS.shareline_2 }}</p>
+      </li>
+    </ul>
+  </div> -->
+  <section class="prose">
+    {{ WORKERS.text_1 }}
+    <div class="inline-feature">
+      <h3>Investigative Findings</h3>
+        {{ META.findings }}
+    </div>
+    {{ WORKERS.text_2 }}
+  </section>
 {% endblock %}
 
 {% block script %}

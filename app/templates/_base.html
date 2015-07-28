@@ -28,7 +28,13 @@
     {% block nav %}{% endblock %}
   </header>
 
-  {% block content %}{% endblock %}
+  <div class="logo">
+    <img src="assets/images/p2p-logo.svg">
+  </div>
+
+  <div class="story-container">
+    {% block content %}{% endblock %}
+  </div>
 
   <div class="story-container">
     <div class="story-content prose info">
@@ -44,6 +50,10 @@
         <li>
           <p><strong><a href="mailto:jmccullough@texastribune.org">Jolie McCullough</a></strong></p>
           <p class="handle">News Apps Developer | <a href="https://twitter.com/jsmccullou" target="_blank">@jsmccullou</a></p>
+        </li>
+        <li>
+          <p><strong><a href="mailto:lcrampton@texastribune.org">Liz Crampton</a></strong></p>
+          <p class="handle">Reporting Fellow | <a href="https://twitter.com/liz_crampton" target="_blank">@liz_crampton</a></p>
         </li>
       </ul>
       <h4>Austin American-Statesman</h4>
@@ -95,6 +105,7 @@
   </footer>
 
 {% block script %}
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="scripts/main.js"></script>
 {% endblock %}
 {% include 'includes/_google_analytics.html' %}
