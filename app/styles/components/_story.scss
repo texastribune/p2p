@@ -4,20 +4,59 @@
 }
 
 .meta {
+  font-size: .875em;
   margin: 1em 0;
 }
-.prose {
-  @include media($default-mobile) {
-    h1 {
-      font-size: 1.7em;
+
+.headline {
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.photo {
+  border-bottom: 1px solid $tribune-yellow;
+  margin-bottom: 1em;
+  padding-bottom: .5em;
+
+  .caption {
+    margin: 0;
+  }
+
+  .credit {
+    font-size: .75em;
+    font-weight: 300;
+    margin-bottom: .5em;
+    text-align: right;
+  }
+}
+
+.inline-feature {
+  border-bottom: 1px solid $tribune-yellow;
+  border-top: 1px solid $tribune-yellow;
+  margin: 1em 0;
+  position: relative;
+
+  @include media($default-desktop) {
+    float: right;
+    margin: .5em 0;
+    margin-left: 3%;
+    width: 47%;
+  }
+
+  ul {
+    font-size: .9em;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin: 1em;
+
+    li {
+      margin-bottom: 1em;
     }
   }
+}
 
-  h1 {
-    line-height: 1.25em;
-    margin: 0 0 .6em;
-  }
-
+.prose {
   h2 {
     line-height: 1em;
     margin: 1em 0;
@@ -29,55 +68,56 @@
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin: 1em 0;
+  }
+}
+
+.info {
+  p {
+    color: $text-gray;
   }
 
-  &.info {
-    p {
-      color: $text-gray;
-    }
+  h3 {
+    margin: 0 0 1em;
+  }
 
-    h3 {
-      margin: 0 0 1em;
-    }
+  h4 {
+    border-bottom: 1px solid $line-gray;
+    color: $text-gray;
+    font-style: italic;
+    font-weight: 700;
+  }
 
-    h4 {
-      border-bottom: 1px solid $line-gray;
-      color: $text-gray;
-      font-style: italic;
-      font-weight: 700;
-    }
+  ul {
+    @include clearfix;
 
-    ul {
-      @include clearfix;
+    font: 400 .875em Helvetica;
+    font-size: 1em;
+    line-height: 1.875em;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
 
-      font: 400 .875em Helvetica;
-      font-size: 1em;
-      line-height: 1.875em;
-      list-style: none;
-      padding: 0;
-      text-align: left;
+  li {
+    font: 400 1em Georgia;
+    line-height: 1.4em;
+    margin-bottom: 1.25em;
 
-      li {
-        font: 400 1em Georgia;
-        line-height: 1.4em;
-        margin-bottom: 1.25em;
-
-        @include media($default-desktop) {
-          @include span-columns(6);
-          &:nth-child(even) {
-            @include omega;
-          }
-        }
-
-        .handle {
-
-          font: 300 .95em Helvetica;
-        }
-
-        p {
-          margin-bottom: 0;
-        }
+    @include media($default-desktop) {
+      @include span-columns(6);
+      &:nth-child(even) {
+        @include omega;
       }
+    }
+
+    .handle {
+
+      font: 300 .95em Helvetica;
+    }
+
+    p {
+      margin-bottom: 0;
     }
   }
 }

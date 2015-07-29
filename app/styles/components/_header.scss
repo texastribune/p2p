@@ -4,7 +4,13 @@ $small-header: new-breakpoint(max-width 450px);
 
 .masthead {
   .branding {
-    padding: .5em 0;
+    padding: .5em 0 .5em .25em;
+    text-align: left;
+
+    @include media($default-desktop) {
+      padding: .5em 0;
+      text-align: center;
+    }
 
     .sub-text {
       color: $white;
@@ -48,15 +54,16 @@ $small-header: new-breakpoint(max-width 450px);
     }
 
     .statesman-logo {
-      height: 1.5em;
+      height: 1.45em;
+      vertical-align: text-bottom;
 
       @include media($default-desktop) {
-        height: 1.75em;
+        height: 1.7em;
       }
     }
 
     img {
-      padding: 0 .4em;
+      padding: 0 .25em;
 
       @include media($med-header) {
         margin: .3em 0;
@@ -71,6 +78,6 @@ $small-header: new-breakpoint(max-width 450px);
 }
 
 .logo {
-  margin: 1em 0;
+  margin: 2em 0;
   text-align: center;
 }

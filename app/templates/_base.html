@@ -20,9 +20,9 @@
     <div class="container menu-container">
       <div class="branding">
         <div id="menu-button" class="menu-icon home"><span></span></a></div>
-        <!-- <a href="//www.texastribune.org/"><img class="trib-logo desktop" alt="The Texas Tribune" src="http://s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-logo-white500x55.png"></a>
-        <span class="sub-text"> | </span> -->
-        <a href="//www.statesman.com"><img class="statesman-logo desktop" alt="The Austin American-Statesman" src="assets/images/tt-statesman.svg"></a>
+        <a href="//www.texastribune.org/"><img class="trib-logo desktop" alt="The Texas Tribune" src="http://s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-logo-white500x55.png"></a>
+        <span class="sub-text"> | </span>
+        <a href="//www.statesman.com"><img class="statesman-logo desktop" alt="The Austin American-Statesman" src="assets/images/statesman-logo.svg"></a>
       </div>
     </div>
     {% block nav %}{% endblock %}
@@ -38,8 +38,12 @@
 
   <div class="story-container">
     <div class="story-content prose info">
+      <h3>More in this series</h3>
+      <ul>
+          {% block more %}{% endblock %}
+      </ul>
       <h3>About</h3>
-      <p>{{ META.about }}</p>
+      <p>{{ FOOTER.about }}</p>
       <h3>Contributors</h3>
       <h4>The Texas Tribune</h4>
       <ul>
@@ -48,12 +52,12 @@
           <p class="handle">Reporter | <a href="https://twitter.com/byjayroot" target="_blank">@byjayroot</a></p>
         </li>
         <li>
-          <p><strong><a href="mailto:jmccullough@texastribune.org">Jolie McCullough</a></strong></p>
-          <p class="handle">News Apps Developer | <a href="https://twitter.com/jsmccullou" target="_blank">@jsmccullou</a></p>
-        </li>
-        <li>
           <p><strong><a href="mailto:lcrampton@texastribune.org">Liz Crampton</a></strong></p>
           <p class="handle">Reporting Fellow | <a href="https://twitter.com/liz_crampton" target="_blank">@liz_crampton</a></p>
+        </li>
+        <li>
+          <p><strong><a href="mailto:jmccullough@texastribune.org">Jolie McCullough</a></strong></p>
+          <p class="handle">News Apps Developer | <a href="https://twitter.com/jsmccullou" target="_blank">@jsmccullou</a></p>
         </li>
       </ul>
       <h4>Austin American-Statesman</h4>
