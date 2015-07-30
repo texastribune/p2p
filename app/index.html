@@ -17,37 +17,18 @@
 {% block content %}
   <h2 class="headline">{{ WORKERS.headline }}</h2>
   <section class="meta prose">
-    <span class="byline">By <a href="{{ WORKERS.byline_url }}">{{ WORKERS.byline }}</a></span>
+    <span class="byline">By <a href="http://www.texastribune.org/about/staff/jay-root">Jay Root</a>
+      and <a href="http://www.statesman.com/staff/tony-plohetski/">Tony Plohetski</a></span>
     &nbsp;|&nbsp;
     <span class="date">{{WORKERS.date }}</span>
   </section>
+
   <figure class="prose photo">
     <img src="{{ WORKERS.img_1 }}" />
     <figcaption class="caption credit">{{WORKERS.credit_1 }}</figcaption>
     <figcaption class="caption">{{ WORKERS.caption_1 }}</figcaption>
   </figure>
-  <!-- <div class="sharelines">
-    <ul>
-      <li>
-        <a href="https://twitter.com/intent/tweet?text={{ WORKERS.shareline_1 | urlencode }}%20http%3A%2F%2Fapps.texastribune.org%2Fblood-lessons%2F{{ WORKERS.slug }}&via=texastribune" title="share on Twitter" class="social-share" target="_blank">
-        <i class="fa fa-twitter"></i>
-        </a>
-        <a href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fapps.texastribune.org%2Fblood-lessons%2F{{ WORKERS.slug }}&redirect_uri=http%3A%2F%2Fapps.texastribune.org%2Fblood-lessons%2F{{ WORKERS.slug }}" title="share on Facebook" class="social-share" target="_blank">
-        <i class="fa fa-facebook"></i>
-        </a>
-        <p>{{ WORKERS.shareline_1 }}</p>
-      </li>
-      <li>
-        <a href="https://twitter.com/intent/tweet?text={{ WORKERS.shareline_2 | urlencode }}%20http%3A%2F%2Fapps.texastribune.org%2Fblood-lessons%2F{{ WORKERS.slug }}&via=texastribune" title="share on Twitter" class="social-share" target="_blank">
-        <i class="fa fa-twitter"></i>
-        </a>
-        <a href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fapps.texastribune.org%2Fblood-lessons%2F{{ WORKERS.slug }}&redirect_uri=http%3A%2F%2Fapps.texastribune.org%2Fblood-lessons%2F{{ WORKERS.slug }}" title="share on Facebook" class="social-share" target="_blank">
-        <i class="fa fa-facebook"></i>
-        </a>
-        <p>{{ WORKERS.shareline_2 }}</p>
-      </li>
-    </ul>
-  </div> -->
+
   <section class="prose">
     {{ WORKERS.text_1 }}
     <div class="inline-feature">
@@ -59,16 +40,20 @@
 {% endblock %}
 
 {% block more %}
-<li><a href="{{ META.section_2_link }}">
-  <img src="{{ FOOTER.pros_sub_img }}" />
-  <h4>{{ META.section_2_title }}</h4>
+<li>
+  <a href="{{ META.section_2_link }}">
+    <img src="{{ FOOTER.pros_sub_img }}" />
+    <h4>{{ META.section_2_title }}</h4>
+  </a>
   <p>{{ FOOTER.pros_sub_desc }}</p>
-</a><li>
-<li><a href="{{ META.section_3_link }}">
-  <img src="{{ FOOTER.insur_sub_img }}" />
-  <h4>{{ META.section_3_title }}</h4>
+</li>
+<li>
+  <a href="{{ META.section_3_link }}">
+    <img src="{{ FOOTER.insur_sub_img }}" />
+    <h4>{{ META.section_3_title }}</h4>
+  </a>
   <p>{{ FOOTER.insur_sub_desc }}</p>
-</a><li>
+</li>
 {% endblock %}
 
 {% block script %}
