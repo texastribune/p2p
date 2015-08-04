@@ -109,6 +109,21 @@ $selected-li: #99d0d3;
     }
   }
 
+  .inactive {
+    pointer-events: none;
+
+    li {
+      color: $border-gray;
+      padding: .5em;
+    }
+
+    span {
+      font-size: .875em;
+      font-style: italic;
+      text-transform: capitalize;
+    }
+  }
+
   li {
     background-color: $selected-li;
     border-top: 2px solid $white;

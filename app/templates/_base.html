@@ -21,14 +21,14 @@
         <div id="menu-button" class="menu-icon home"><span></span></a></div>
         <a href="//www.texastribune.org/"><img class="trib-logo desktop" alt="The Texas Tribune" src="http://s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-logo-white500x55.png"></a>
         <span class="sub-text"> | </span>
-        <a href="//www.statesman.com"><img class="statesman-logo desktop" alt="The Austin American-Statesman" src="assets/images/statesman-logo.svg"></a>
+        <a href="//www.statesman.com">{% block statesmanlogo %}{% endblock %}</a>
       </div>
     </div>
     {% block nav %}{% endblock %}
   </header>
 
   <div class="logo">
-    <img src="assets/images/p2p-logo.svg">
+    {% block logo %}{% endblock %}
   </div>
 
   <div class="story-container">

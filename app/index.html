@@ -5,14 +5,22 @@
 {{ super() }}
 {% endblock %}
 
+{%block statesmanlogo %}
+<img class="statesman-logo desktop" alt="The Austin American-Statesman" src="assets/images/statesman-logo.svg">
+{% endblock %}
+
 {%block nav %}
 <nav id="menu" class="menu">
   <ul>
     <a href="{{META.section_1_slug }}"><li class="selected">{{META.section_1_title }}</li></a>
-    <a href="{{META.section_2_slug }}"><li>{{META.section_2_title }}</li></a>
-    <a href="{{META.section_3_slug }}"><li>{{META.section_3_title }}</li></a>
+    <a  class="inactive" href="{{META.section_2_slug }}"><li>{{META.section_2_title }}<br><span>(Coming Sept. 10)</span></li></a>
+    <a  class="inactive" href="{{META.section_3_slug }}"><li>{{META.section_3_title }}<br><span>(Coming Sept. 11)</span></li></a>
   </ul>
 </nav>
+{% endblock %}
+
+{% block logo %}
+<img src="assets/images/p2p-logo.svg">
 {% endblock %}
 
 {% block content %}
@@ -41,16 +49,18 @@
 {% endblock %}
 
 {% block more %}
-<li>
+<li class="inactive">
   <a href="{{ META.section_2_link }}">
     <img src="{{ FOOTER.pros_sub_img }}" />
+    <p class="upcoming">(Coming Sept. 10)</p>
     <h4>{{ META.section_2_title }}</h4>
   </a>
   <p>{{ FOOTER.pros_sub_desc }}</p>
 </li>
-<li>
+<li class="inactive">
   <a href="{{ META.section_3_link }}">
     <img src="{{ FOOTER.insur_sub_img }}" />
+    <p class="upcoming">(Coming Sept. 11)</p>
     <h4>{{ META.section_3_title }}</h4>
   </a>
   <p>{{ FOOTER.insur_sub_desc }}</p>

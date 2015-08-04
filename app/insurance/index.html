@@ -5,6 +5,10 @@
 {{ super() }}
 {% endblock %}
 
+{%block statesmanlogo %}
+<img class="statesman-logo desktop" alt="The Austin American-Statesman" src="../assets/images/statesman-logo.svg">
+{% endblock %}
+
 {%block nav %}
 <nav id="menu" class="menu">
   <ul>
@@ -13,6 +17,10 @@
     <a href="/{{META.section_3_slug }}"><li class="selected">{{META.section_3_title }}</li></a>
   </ul>
 </nav>
+{% endblock %}
+
+{% block logo %}
+<img src="../assets/images/p2p-logo.svg">
 {% endblock %}
 
 {% block content %}
@@ -42,18 +50,18 @@
 
 {% block more %}
 <li>
+  <a href="{{ META.section_1_link }}">
+    <img src="{{ FOOTER.workers_sub_img }}" />
+    <h4>{{ META.section_1_title }}</h4>
+  </a>
+  <p>{{ FOOTER.workers_sub_desc }}</p>
+</li>
+<li>
   <a href="{{ META.section_2_link }}">
     <img src="{{ FOOTER.pros_sub_img }}" />
     <h4>{{ META.section_2_title }}</h4>
   </a>
   <p>{{ FOOTER.pros_sub_desc }}</p>
-</li>
-<li>
-  <a href="{{ META.section_3_link }}">
-    <img src="{{ FOOTER.insur_sub_img }}" />
-    <h4>{{ META.section_3_title }}</h4>
-  </a>
-  <p>{{ FOOTER.insur_sub_desc }}</p>
 </li>
 {% endblock %}
 
