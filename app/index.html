@@ -45,6 +45,11 @@
         {{ META.findings }}
     </div>
     {{ WORKERS.text_2 }}
+    <blockquote class="prose-block">
+      <p class="blockquote">{{ WORKERS.block_quote }}</p>
+      <p class="blockquote-source">— {{ WORKERS.block_quote_source }}</p>
+    </blockquote>
+    {{ WORKERS.text_3 }}
   </section>
 {% endblock %}
 
@@ -69,4 +74,5 @@
 
 {% block script %}
 {{ super()}}
+<script src="scripts/main.js"></script>
 {% endblock %}
