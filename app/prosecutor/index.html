@@ -24,27 +24,27 @@
 {% endblock %}
 
 {% block content %}
-  <h2 class="headline">{{ WORKERS.headline }}</h2>
+  <h2 class="headline">{{ PROSECUTOR.headline }}</h2>
   <section class="meta prose">
     <span class="byline">By <a href="http://www.texastribune.org/about/staff/jay-root">Jay Root</a>
       and <a href="http://www.statesman.com/staff/tony-plohetski/">Tony Plohetski</a></span>
     &nbsp;|&nbsp;
-    <span class="date">{{WORKERS.date }}</span>
+    <span class="date">{{PROSECUTOR.date }}</span>
   </section>
 
   <figure class="prose photo">
-    <img src="{{ WORKERS.img_1 }}" />
-    <figcaption class="caption credit">{{WORKERS.credit_1 }}</figcaption>
-    <figcaption class="caption">{{ WORKERS.caption_1 }}</figcaption>
+    <img src="{{ PROSECUTOR.img_1 }}" />
+    <figcaption class="caption credit">{{PROSECUTOR.credit_1 }}</figcaption>
+    <figcaption class="caption">{{ PROSECUTOR.caption_1 }}</figcaption>
   </figure>
 
   <section class="prose">
-    {{ WORKERS.text_1 }}
+    {{ PROSECUTOR.text_1 }}
     <div class="inline-feature">
       <h3>Investigative Findings</h3>
         {{ META.findings }}
     </div>
-    {{ WORKERS.text_2 }}
+    {{ PROSECUTOR.text_2 }}
     <p class="disclosure">Liz Crampton contributed to this report.</p>
   </section>
 {% endblock %}
