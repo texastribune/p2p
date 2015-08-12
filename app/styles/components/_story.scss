@@ -32,14 +32,27 @@
   font-weight: 400;
 }
 
-.share {
-  @include span-columns(6);
+.share-buttons {
+  border-bottom: 1px solid $href-teal;
+  border-top: 1px solid $href-teal;
+  line-height: 1em;
+  margin-bottom: 1em;
 
-  .ghost-button {
-    width: 100%;
+  ul {
+    margin: 0;
 
-    &.last {
-      @include omega();
+    li {
+      list-style: none;
+      display: inline-block;
+      width: 49%;
+      text-align: center;
+      margin: 0;
+      padding: .75em 0;
+
+      &:last-child {
+        border-left: 1px solid $href-teal;
+        margin-bottom: 0;
+      }
     }
   }
 }
