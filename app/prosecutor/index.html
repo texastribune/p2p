@@ -38,7 +38,22 @@
     <figcaption class="caption">{{ PROSECUTOR.caption_1 }}</figcaption>
   </figure>
 
-  <section class="prose">
+  <section class="prose graf share-buttons">
+    <ul>
+      <a class="share" href="https://twitter.com/intent/tweet?text={{ PROSECUTOR.headline | urlencode }}%20http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{ META.section_2_slug }}&via=texastribune" title="share on Twitter" class="social-share" target="_blank">
+        <li class="ghost-button">
+          <i class="fa fa-twitter"></i> Tweet
+        </li>
+      </a>
+      <a class="share" href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{ META.section_2_slug }}&redirect_uri=http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{ META.section_2_slug }}" title="share on Facebook" class="social-share" target="_blank">
+        <li class="ghost-button last">
+          <i class="fa fa-facebook"></i> Share
+        </li>
+      </a>
+    </ul>
+  </section>
+
+  <section class="prose graf first">
     {{ PROSECUTOR.text_1 }}
     <div class="inline-feature">
       <h3>Investigative Findings</h3>

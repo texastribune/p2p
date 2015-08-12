@@ -32,6 +32,19 @@
   font-weight: 400;
 }
 
+.share {
+  @include span-columns(6);
+
+  .ghost-button {
+    width: 100%;
+
+    &.last {
+      @include omega();
+    }
+  }
+}
+
+
 .photo {
   border-bottom: 1px solid $tribune-yellow;
   margin-bottom: 1em;
