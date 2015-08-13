@@ -32,12 +32,17 @@
       display: inline-block;
       margin-bottom: 0;
       width: 48%;
+      margin-right: 2%;
     }
 
     img {
       float: left;
       margin-right: 1em;
       width: 150px;
+    }
+
+    &:last-child {
+      margin: 0;
     }
   }
 

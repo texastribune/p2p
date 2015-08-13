@@ -40,25 +40,27 @@
 
   <section class="prose graf share-buttons">
     <ul>
-      <a class="share" href="https://twitter.com/intent/tweet?text={{ INSURANCE.headline | urlencode }}%20http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{ META.section_3_slug }}&via=texastribune" title="share on Twitter" class="social-share" target="_blank">
-        <li class="ghost-button">
-          <i class="fa fa-twitter"></i> Tweet
-        </li>
-      </a>
-      <a class="share" href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{ META.section_3_slug }}&redirect_uri=http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{ META.section_3_slug }}" title="share on Facebook" class="social-share" target="_blank">
-        <li class="ghost-button last">
-          <i class="fa fa-facebook"></i> Share
-        </li>
-      </a>
+      <li>
+        <a href="https://twitter.com/intent/tweet?text={{ WORKERS.headline | urlencode }}%20http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F&via=texastribune" title="share on Twitter" class="social-share" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="share" href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F&redirect_uri=http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F" title="share on Facebook" class="social-share" target="_blank">
+          <i class="fa fa-facebook"></i>
+        </a>
+      </li>
     </ul>
   </section>
 
   <section class="prose graf first">
     {{ INSURANCE.text_1 }}
-    <div class="inline-feature">
-      <h3>Investigative Findings</h3>
-        {{ META.findings }}
-    </div>
+  </section>
+  <div class="prose inline-feature">
+    <h3>Investigative Findings</h3>
+      {{ META.findings }}
+  </div>
+  <section class="prose graf">
     {{ INSURANCE.text_2 }}
     <p class="disclosure">Liz Crampton contributed to this report.</p>
   </section>
