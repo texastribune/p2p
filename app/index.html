@@ -53,9 +53,6 @@
     </ul>
   </section>
 
-  {% include 'includes/slider.html' %}
-  {{ slider(SLIDER) }}
-
   <section class="prose graf first">
     {{ WORKERS.text_1 }}
   </section>
@@ -78,6 +75,13 @@
   </figure>
   <section class="prose graf">
     {{ WORKERS.text_4 }}
+  </section>
+
+  {% include 'includes/slider.html' %}
+  {{ slider(SLIDER) }}
+
+  <section class="prose graf">
+    {{ WORKERS.text_5 }}
     <p class="disclosure">Liz Crampton contributed to this report.</p>
   </section>
 {% endblock %}

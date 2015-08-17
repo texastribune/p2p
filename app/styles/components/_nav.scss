@@ -1,90 +1,21 @@
 $nav-bp: new-breakpoint(min-width 900px);
+$full-nav: new-breakpoint(min-width 600px);
 $selected-li: #99d0d3;
 
-.menu-icon {
-  cursor: pointer;
-  display: block;
-  float: right;
-  margin-top: -1em;
-  padding: 1.75em .75em 1.25em;
-
-  @include media($small-header) {
-    margin-left: 2em;
-    padding: 2.15em 1em 1.85em;
-  }
-
-  @include media($default-desktop) {
-    display: none;
-  }
-
-  &.x {
-    background-color: $selected-li;
-
-    &.home {
-      background-color: $href-teal;
-    }
-  }
-
-  span {
-    background-color: $white;
-    display: block;
-    height: .2em;
-    margin: 0 auto;
-    position: relative;
-    transition-delay: .2s;
-    transition-duration: 0;
-    width: 1.5em;
-
-    @include media($small-header) {
-      width: 1.75em;
-    }
-
-    &:before,
-    &:after {
-      background-color: $white;
-      content: '';
-      display: block;
-      height: .2em;
-      position: absolute;
-      transition-delay: .2s, 0;
-      transition-duration: .2s;
-      transition-property: margin, transform;
-      width: 1.5em;
-
-      @include media($small-header) {
-        width: 1.75em;
-      }
-    }
-
-    &:before {
-      margin-top: -.5em;
-    }
-
-    &:after {
-      margin-top: .5em;
-    }
-  }
-}
-
 .menu {
-  background-color: $white;
-  border-bottom: 2px solid $href-teal;
-  display: none;
+  background-color: $href-teal;
 
-  @include media($default-desktop) {
-    display: block;
+  @include media($full-nav) {
+    background-color: $white;
+    border-bottom: 2px solid $href-teal;
+  }
 
-    &.sticky {
-      margin-top: 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-
-      li {
-        margin: 0;
-      }
-    }
+  &.sticky {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
 
   ul {
@@ -94,18 +25,18 @@ $selected-li: #99d0d3;
   }
 
   a {
-    color: $bodytext-black;
+    color: $selected-li;
     cursor: pointer;
     font-weight: 400;
     letter-spacing: .03em;
     text-transform: uppercase;
 
-    &:hover {
-      text-decoration: none;
+    @include media($full-nav) {
+      color: $bodytext-black;
     }
 
-    &:first-child li {
-      border-top: 0;
+    &:hover {
+      text-decoration: none;
     }
   }
 
@@ -125,18 +56,21 @@ $selected-li: #99d0d3;
   }
 
   li {
-    background-color: $selected-li;
-    border-top: 2px solid $white;
-    font-size: .9em;
+    border: 1px solid $href-teal;
+    border-radius: 5px;
+    float: left;
+    font-size: .7em;
+    margin: 1%;
     padding: 1em .5em;
     text-align: center;
+    width: 31%;
 
-    @include media($default-desktop) {
+    @include media($full-nav) {
       background-color: $white;
-      border-top: 0;
-      float: left;
+      border-radius: 0;
+      border: 0;
+      font-size: .9em;
       margin: 0;
-      text-align: center;
       width: 33.3%;
 
       &:hover {
@@ -149,18 +83,17 @@ $selected-li: #99d0d3;
       font-size: 1em;
     }
 
-    &.selected {
-      background-color: $href-teal;
-      color: $white;
+    &:hover {
+      border-color: $selected-li;
+    }
 
-      @include media($default-desktop) {
+    &.selected {
+      background-color: $selected-li;
+      color: $bodytext-black;
+
+      &:hover {
         background-color: $selected-li;
         color: $bodytext-black;
-
-        &:hover {
-          background-color: $selected-li;
-          color: $bodytext-black;
-        }
       }
     }
   }

@@ -1,6 +1,5 @@
 {% macro slider(sheet) %}
-<section>
-    <div class="flexslider">
+<section class="flexslider">
       <ul class="slides">
       {% for row in sheet %}
         <li>
@@ -14,6 +13,5 @@
         </li>
       {% endfor %}
       </ul>
-    </div>
   </section>
 {% endmacro %}

@@ -1,15 +1,19 @@
 
 $med-header: new-breakpoint(max-width 560px);
-$small-header: new-breakpoint(max-width 450px);
+$small-header: new-breakpoint(max-width 400px);
 
 .masthead {
   .branding {
     padding: .5em 0 .5em .25em;
-    text-align: left;
+    text-align: center;
 
     @include media($default-desktop) {
       padding: .5em 0;
       text-align: center;
+    }
+
+    @include media($small-header) {
+      padding: .3em .2em;
     }
 
     .sub-text {
@@ -23,7 +27,7 @@ $small-header: new-breakpoint(max-width 450px);
       }
 
       @include media($small-header) {
-        display: none;
+        vertical-align: super;
       }
 
       @include media($default-desktop) {
@@ -36,9 +40,9 @@ $small-header: new-breakpoint(max-width 450px);
       margin: 0;
       padding: 0;
 
-      @include media($small-header) {
-        float: left;
-      }
+      // @include media($small-header) {
+      //   float: left;
+      // }
     }
 
     .trib-logo {
@@ -49,7 +53,7 @@ $small-header: new-breakpoint(max-width 450px);
       }
 
       @include media($small-header) {
-        margin-bottom: .25em;
+        height: .9em;
       }
     }
 
@@ -59,6 +63,10 @@ $small-header: new-breakpoint(max-width 450px);
 
       @include media($default-desktop) {
         height: 1.7em;
+      }
+
+      @include media($small-header) {
+        height: 1.2em;
       }
     }
 
@@ -70,8 +78,7 @@ $small-header: new-breakpoint(max-width 450px);
       }
 
       @include media($small-header) {
-        display: block;
-        margin: 0;
+        padding: 0 .1em;
       }
     }
   }
