@@ -52,6 +52,10 @@
       </li>
     </ul>
   </section>
+
+  {% include 'includes/slider.html' %}
+  {{ slider(SLIDER) }}
+
   <section class="prose graf first">
     {{ WORKERS.text_1 }}
   </section>
@@ -100,4 +104,5 @@
 {% block script %}
 {{ super()}}
 <script src="scripts/main.js"></script>
+<script src="scripts/flex.js"></script>
 {% endblock %}
