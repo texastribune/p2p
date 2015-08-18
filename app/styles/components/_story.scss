@@ -85,6 +85,10 @@
   margin-bottom: 1em;
   padding-bottom: .5em;
 
+  &.top {
+    border: 0;
+  }
+
   &.inline {
     @include media($default-desktop) {
       clear: left;

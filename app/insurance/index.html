@@ -32,7 +32,7 @@
     <span class="date">{{INSURANCE.date }}</span>
   </section>
 
-  <figure class="prose photo">
+  <figure class="prose photo top">
     <img src="{{ INSURANCE.img_1 }}" />
     <figcaption class="caption credit">{{INSURANCE.credit_1 }}</figcaption>
     <figcaption class="caption">{{ INSURANCE.caption_1 }}</figcaption>
@@ -68,14 +68,14 @@
 
 {% block more %}
 <li>
-  <a href="{{ META.section_1_link }}">
+  <a href="../{{ META.section_1_slug }}">
     <img src="{{ FOOTER.workers_sub_img }}" />
     <h4>{{ META.section_1_title }}</h4>
   </a>
   <p>{{ FOOTER.workers_sub_desc }}</p>
 </li>
 <li>
-  <a href="{{ META.section_2_link }}">
+  <a href="../{{ META.section_2_slug }}">
     <img src="{{ FOOTER.pros_sub_img }}" />
     <h4>{{ META.section_2_title }}</h4>
   </a>

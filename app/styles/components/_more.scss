@@ -46,6 +46,13 @@
     }
   }
 
+  .upcoming {
+    visibility: hidden;
+    font-style: italic;
+    margin-bottom: 0;
+    font-size: 1em;
+  }
+
   .inactive {
     pointer-events: none;
 
@@ -62,9 +69,7 @@
       color: $border-gray;
 
       &.upcoming {
-        font-style: italic;
-        margin-bottom: 0;
-        font-size: 1em;
+        visibility: visible;
       }
     }
   }
