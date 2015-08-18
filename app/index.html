@@ -77,8 +77,12 @@
     {{ WORKERS.text_4 }}
   </section>
 
-  {% include 'includes/slider.html' %}
-  {{ slider(SLIDER) }}
+  <!-- {% include 'includes/slider.html' %}
+  {{ slider(SLIDER) }} -->
+  <section class="prose cards">
+    {% include 'includes/cards.html' %}
+    {{ cards(SUMMARIES) }}
+  </section>
 
   <section class="prose graf">
     {{ WORKERS.text_5 }}

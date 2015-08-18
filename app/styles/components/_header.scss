@@ -39,10 +39,6 @@ $small-header: new-breakpoint(max-width 400px);
     a {
       margin: 0;
       padding: 0;
-
-      // @include media($small-header) {
-      //   float: left;
-      // }
     }
 
     .trib-logo {
@@ -54,6 +50,7 @@ $small-header: new-breakpoint(max-width 400px);
 
       @include media($small-header) {
         height: .9em;
+        vertical-align: -1px;
       }
     }
 

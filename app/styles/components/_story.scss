@@ -114,10 +114,10 @@
 
   @include media($default-desktop) {
     float: right;
+    margin-right: 1em;
     margin: .75em 0 .75em 3%;
     padding-left: 1em;
     width: 46%;
-    margin-right: 1em;
   }
 
   ul {
@@ -134,9 +134,9 @@
 
 .prose {
   @include media($default-desktop) {
-    .inline-feature {
+    &.inline-feature {
       h3 {
-        margin-top: 0;
+        text-align: center;
       }
     }
   }

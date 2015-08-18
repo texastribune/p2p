@@ -33,7 +33,7 @@ $selected-li: #99d0d3;
     color: $selected-li;
     cursor: pointer;
     font-weight: 400;
-    letter-spacing: .03em;
+    letter-spacing: .02em;
     text-transform: uppercase;
 
     @include media($full-nav) {
