@@ -1,20 +1,17 @@
 {% macro cards(sheet) %}
-<section class="prose cards">
-  <h3>Other cases</h3>
-  <p class="subtext">
+<section class="prose graf">
+  <div class="intro">
     {% for row in sheet %}
       {% if loop.first %}
         {{ row.Intro_text_md }}
       {% endif %}
     {% endfor %}
-  </p>
+  </div>
   <div class="summaries">
   {% for row in sheet %}
     {% if row.case_name %}
-      <div>
-        <h4>{{ row.case_name }}</h4>
-        {{ row.summary_md }}
-      </div>
+      <h3>{{ row.case_name }}</h3>
+      {{ row.summary_md }}
     {% endif %}
   {% endfor %}
 </div>

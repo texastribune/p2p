@@ -77,11 +77,6 @@
     {{ WORKERS.text_4 }}
   </section>
 
-  <!-- {% include 'includes/slider.html' %}
-  {{ slider(SLIDER) }} -->
-  {% include 'includes/cards.html' %}
-  {{ cards(SUMMARIES) }}
-
   <section class="prose graf">
     {{ WORKERS.text_5 }}
     <p class="disclosure">Liz Crampton contributed to this report.</p>
@@ -89,26 +84,26 @@
 {% endblock %}
 
 {% block more %}
-<li class="inactive">
+<div class="more-story inactive">
   <a href="{{ META.section_2_slug }}">
     <img src="{{ FOOTER.pros_sub_img }}" />
     <p class="upcoming">(Coming Sept. 10)</p>
     <h4>{{ META.section_2_title }}</h4>
   </a>
   <p>{{ FOOTER.pros_sub_desc }}</p>
-</li>
-<li class="inactive">
+</div>
+<div class="more-story inactive">
   <a href="{{ META.section_3_slug }}">
     <img src="{{ FOOTER.insur_sub_img }}" />
     <p class="upcoming">(Coming Sept. 11)</p>
     <h4>{{ META.section_3_title }}</h4>
   </a>
   <p>{{ FOOTER.insur_sub_desc }}</p>
-</li>
+</div>
 {% endblock %}
 
 {% block script %}
 {{ super()}}
 <script src="scripts/main.js"></script>
-<script src="scripts/flex.js"></script>
+<!-- <script src="scripts/flex.js"></script> -->
 {% endblock %}

@@ -67,22 +67,22 @@
 {% endblock %}
 
 {% block more %}
-<li>
+<div class="more-story">
   <a href="../{{ META.section_1_slug }}">
     <img src="{{ FOOTER.workers_sub_img }}" />
     <p class="upcoming">(Live on Sept. 10)</p>
     <h4>{{ META.section_1_title }}</h4>
   </a>
   <p>{{ FOOTER.workers_sub_desc }}</p>
-</li>
-<li class="inactive">
+</div>
+<div class="more-story inactive">
   <a href="../{{ META.section_3_slug }}">
     <img src="{{ FOOTER.insur_sub_img }}" />
     <p class="upcoming">(Coming Sept. 11)</p>
     <h4>{{ META.section_3_title }}</h4>
   </a>
   <p>{{ FOOTER.insur_sub_desc }}</p>
-</li>
+</div>
 {% endblock %}
 
 {% block script %}
