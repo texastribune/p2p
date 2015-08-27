@@ -68,6 +68,17 @@
     </blockquote>
     {{ WORKERS.text_3 }}
   </section>
+
+  <section class="prose case-card left">
+    <h3>Related Coverage</h3>
+    <div class="top">
+      <img src="{{PATH_PREFIX}}assets/images/folder.png">
+      <h4>{{ CARDS.card1_title }}</h4>
+    </div>
+    {{ CARDS.card1_desc }}
+    <a class="ghost-button" href="{{PATH_PREFIX}}cases#case1">Learn more</a>
+  </section>
+
   <figure class="prose photo inline">
     <img src="assets/images/{{ WORKERS.img_2 }}" />
     <figcaption class="caption credit">{{WORKERS.credit_2 }}</figcaption>
@@ -104,5 +115,4 @@
 
 {% block script %}
 {{ super()}}
-<script src="scripts/main.js"></script>
 {% endblock %}

@@ -3,3 +3,65 @@
     font-family: $base-sans-serif;
   }
 }
+
+.case-card {
+  padding: 1em;
+
+  @include media($default-desktop) {
+    width: 300px;
+
+    &.left {
+      border-right: 2px solid $tribune-yellow;
+      float: left;
+      margin-right: 1em;
+    }
+
+    &.right {
+      border-left: 2px solid $tribune-yellow;
+      float: right;
+      margin-left: 1em;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .top {
+    margin-bottom: .5em;
+
+    @include clearfix;
+  }
+
+  img {
+    float: left;
+    height: 2.75em;
+    margin-right: .5em;
+  }
+
+  h4 {
+    float: left;
+    font-family: $base-sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-top: .5em;
+  }
+
+  p {
+    font-family: $base-sans-serif;
+    font-size: .875em;
+    line-height: 1.25em;
+  }
+
+  .ghost-button {
+    border-radius: 0;
+    float: right;
+    font-size: .8em;
+    font-weight: 700;
+    padding: .25em .5em;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
