@@ -101,7 +101,8 @@
   </footer>
 
 {% block script %}
-<script src="scripts/libs/jquery-1.11.3.min.js"></script>
+<script>console.log('blah' + '{{PATH_PREFIX}}');</script>
+<script src="{{ PATH_PREFIX }}scripts/libs/jquery-1.11.3.min.js"></script>
 {% endblock %}
 {% include 'includes/_google_analytics.html' %}
 </body>
