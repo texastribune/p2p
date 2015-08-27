@@ -13,6 +13,8 @@ var $ = require('gulp-load-plugins')({
 var runSequence = require('run-sequence');
 var del = require('del');
 
+var args = require('yargs').argv;
+
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
@@ -51,18 +53,21 @@ gulp.task('styles', function () {
 gulp.task('templates', function() {
   var nunjucks = require('nunjucks');
   var map = require('vinyl-map');
+  var url = require('url');
 
   var data = JSON.parse(fs.readFileSync('data.json', 'utf8'));
 
-  // pulls over the bucket and slug data for the preview page
   var packageData = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  data.SITE = packageData.config;
+  var config = packageData.config;
+
+  var basePath = args.production ? url.resolve('/', config.slug) + '/' : '/';
+  data.PATH_PREFIX = basePath;
 
   // disable watching or it'll hang forever
-  nunjucks.configure('./app/templates', {watch: false});
+  var env = nunjucks.configure('./app/templates', {watch: false});
 
   var nunjuckified = map(function(code, filename) {
-    return nunjucks.renderString(code.toString(), data);
+    return env.renderString(code.toString(), data);
   });
 
   return gulp.src(['app/**/{*,!_*}.html', '!app/**/_*.html'])
