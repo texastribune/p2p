@@ -94,8 +94,8 @@ gulp.task('assets', function() {
   .pipe($.size({title: 'assets'}));
 });
 
-gulp.task('clean', function() {
-  del(['.tmp', 'dist/*', '!dist/.git'], {dot: true});
+gulp.task('clean', function(cb) {
+  del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}, cb);
 });
 
 gulp.task('serve', ['styles', 'jshint', 'templates'], function() {
