@@ -10,7 +10,7 @@
   <div class="summaries">
   {% for row in sheet %}
     {% if row.case_name %}
-      <h3>{{ row.case_name }}</h3>
+      <h3 id="case{{ loop.index0 }}">{{ row.case_name }}</h3>
       {{ row.summary_md }}
     {% endif %}
   {% endfor %}
