@@ -12,6 +12,7 @@
   <![endif]-->
   {% block styles %}
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ PATH_PREFIX }}styles/main.css">
   {% endblock %}
 </head>
 <body>
@@ -20,14 +21,14 @@
       <div class="branding">
         <a href="//www.texastribune.org/"><img class="trib-logo desktop" alt="The Texas Tribune" src="http://s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-logo-white500x55.png"></a>
         <span class="sub-text"> | </span>
-        <a href="//www.statesman.com">{% block statesmanlogo %}{% endblock %}</a>
+        <a href="//www.statesman.com"><img class="statesman-logo desktop" alt="The Austin American-Statesman" src="{{ PATH_PREFIX }}assets/images/statesman-logo.svg"></a>
       </div>
     </div>
     {% block nav %}{% endblock %}
   </header>
 
   <div class="logo">
-    {% block logo %}{% endblock %}
+    <img src="{{ PATH_PREFIX }}assets/images/p2p-logo.svg">
   </div>
 
   <div class="story-container">

@@ -1,12 +1,7 @@
 {% extends "_base.html" %}
 
 {% block styles %}
-<link rel="stylesheet" href="../styles/main.css">
 {{ super() }}
-{% endblock %}
-
-{%block statesmanlogo %}
-<img class="statesman-logo desktop" alt="The Austin American-Statesman" src="../assets/images/statesman-logo.svg">
 {% endblock %}
 
 {%block nav %}
@@ -17,10 +12,6 @@
     <a  class="inactive" href="{{META.section_3_slug }}"><li>{{META.section_3_title }}<br><span>(Coming Sept. 11)</span></li></a>
   </ul>
 </nav>
-{% endblock %}
-
-{% block logo %}
-<img src="../assets/images/p2p-logo.svg">
 {% endblock %}
 
 {% block content %}
