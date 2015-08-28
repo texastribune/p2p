@@ -10,7 +10,10 @@
   <div class="summaries">
   {% for row in sheet %}
     {% if row.case_name %}
-      <h3 id="case{{ loop.index0 }}">{{ row.case_name }}</h3>
+      <div id="case{{ loop.index0 }}" class="summary-head">
+        <img class="folder" src="{{PATH_PREFIX}}assets/images/folder.png">
+        <h2>{{ row.case_name }}</h2>
+      </div>
       {{ row.summary_md }}
     {% endif %}
   {% endfor %}
