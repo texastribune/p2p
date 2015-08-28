@@ -25,10 +25,14 @@
 }
 
 .case-card {
+  border-bottom: 2px solid $tribune-yellow;
+  border-top: 2px solid $tribune-yellow;
   margin: 1em 0;
   padding: 1em;
 
-  @include media($default-desktop) {
+  @include media($non-mobile) {
+    border-bottom: 0;
+    border-top: 0;
     width: 300px;
 
     &.left {

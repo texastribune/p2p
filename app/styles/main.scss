@@ -1,6 +1,8 @@
 @import 'node_modules/newsapps-styles/init-helpers';
 @import 'node_modules/newsapps-styles/initialize';
 
+$non-mobile: new-breakpoint(min-width 550px);
+
 @import 'components/header';
 @import 'components/nav';
 @import 'components/story';
