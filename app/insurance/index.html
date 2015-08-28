@@ -5,10 +5,6 @@
 {{ super() }}
 {% endblock %}
 
-{%block statesmanlogo %}
-<img class="statesman-logo desktop" alt="The Austin American-Statesman" src="../assets/images/statesman-logo.svg">
-{% endblock %}
-
 {%block nav %}
 <nav id="menu" class="menu">
   <ul>
@@ -17,10 +13,6 @@
     <a href="/{{META.section_3_slug }}"><li class="selected">{{META.section_3_title }}</li></a>
   </ul>
 </nav>
-{% endblock %}
-
-{% block logo %}
-<img src="../assets/images/p2p-logo.svg">
 {% endblock %}
 
 {% block content %}
@@ -85,5 +77,4 @@
 
 {% block script %}
 {{ super()}}
-<script src="../scripts/main.js"></script>
 {% endblock %}

@@ -1,34 +1,27 @@
 {% extends "_base.html" %}
 
 {% block styles %}
-<link rel="stylesheet" href="../styles/main.css">
 {{ super() }}
-{% endblock %}
-
-{%block statesmanlogo %}
-<img class="statesman-logo desktop" alt="The Austin American-Statesman" src="../assets/images/statesman-logo.svg">
 {% endblock %}
 
 {%block nav %}
 <nav id="menu" class="menu">
   <ul>
-    <a href="/{{META.section_1_slug }}"><li>{{META.section_1_title }}</li></a>
-    <a class="inactive" href="/{{META.section_2_slug }}"><li>{{META.section_2_title }}<br><span>(Coming Sept. 10)</span></li></a>
-    <a class="inactive" href="{{META.section_3_slug }}"><li>{{META.section_3_title }}<br><span>(Coming Sept. 11)</span></li></a>
+    <a href="{{PATH_PREFIX}}{{META.section_1_slug }}"><li>{{META.section_1_title }}</li></a>
+    <a class="inactive" href="{{PATH_PREFIX}}{{META.section_2_slug }}"><li>{{META.section_2_title }}<br><span>(Coming Sept. 10)</span></li></a>
+    <a class="inactive" href="{{PATH_PREFIX}}{{META.section_3_slug }}"><li>{{META.section_3_title }}<br><span>(Coming Sept. 11)</span></li></a>
   </ul>
 </nav>
 {% endblock %}
 
-{% block logo %}
-<img src="../assets/images/p2p-logo.svg">
-{% endblock %}
-
 {% block content %}
-  <h2 class="headline">Case Summaries</h2>
-  <section class="meta prose">
-    <span class="byline">By Liz Crampton</a></span>
-    &nbsp;|&nbsp;
-    <span class="date">{{WORKERS.date }}</span>
+  <section class="graf">
+    <h2 class="headline graf">Case Summaries</h2>
+    <section class="meta prose graf">
+      <span class="byline">By Liz Crampton</a></span>
+      &nbsp;|&nbsp;
+      <span class="date">{{WORKERS.date }}</span>
+    </section>
   </section>
 
   <section class="prose graf share-buttons">
@@ -46,8 +39,8 @@
     </ul>
   </section>
 
-  {% include 'includes/cards.html' %}
-  {{ cards(SUMMARIES) }}
+  {% include 'includes/_cases.html' %}
+  {{ cases(SUMMARIES) }}
 {% endblock %}
 
 {% block more %}
@@ -79,5 +72,4 @@
 
 {% block script %}
 {{ super()}}
-<script src="../scripts/main.js"></script>
 {% endblock %}

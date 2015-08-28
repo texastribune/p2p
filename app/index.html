@@ -1,12 +1,7 @@
 {% extends "_base.html" %}
 
 {% block styles %}
-<link rel="stylesheet" href="styles/main.css">
 {{ super() }}
-{% endblock %}
-
-{%block statesmanlogo %}
-<img class="statesman-logo desktop" alt="The Austin American-Statesman" src="assets/images/statesman-logo.svg">
 {% endblock %}
 
 {%block nav %}
@@ -17,10 +12,6 @@
     <a  class="inactive" href="{{META.section_3_slug }}"><li>{{META.section_3_title }}<br><span>(Coming Sept. 11)</span></li></a>
   </ul>
 </nav>
-{% endblock %}
-
-{% block logo %}
-<img src="assets/images/p2p-logo.svg">
 {% endblock %}
 
 {% block content %}
@@ -68,17 +59,32 @@
     </blockquote>
     {{ WORKERS.text_3 }}
   </section>
+
+  <section class="prose case-card right">
+    <h3>More cases</h3>
+    <div class="top">
+      <img src="{{PATH_PREFIX}}assets/images/folder.png">
+      <h4>{{ CARDS.card1_title }}</h4>
+    </div>
+    {{ CARDS.card1_desc }}
+    <a class="ghost-button" href="{{PATH_PREFIX}}cases#case1">Learn more</a>
+  </section>
+
+  <section class="prose graf">
+    {{WORKERS.text_4}}
+  </section>
+
   <figure class="prose photo inline">
     <img src="assets/images/{{ WORKERS.img_2 }}" />
     <figcaption class="caption credit">{{WORKERS.credit_2 }}</figcaption>
     <figcaption class="caption">{{ WORKERS.caption_2 }}</figcaption>
   </figure>
   <section class="prose graf">
-    {{ WORKERS.text_4 }}
+    {{ WORKERS.text_5 }}
   </section>
 
   <section class="prose graf">
-    {{ WORKERS.text_5 }}
+    {{ WORKERS.text_6 }}
     <p class="disclosure">Liz Crampton contributed to this report.</p>
   </section>
 {% endblock %}
@@ -104,5 +110,4 @@
 
 {% block script %}
 {{ super()}}
-<script src="scripts/main.js"></script>
 {% endblock %}
