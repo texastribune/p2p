@@ -4,7 +4,7 @@
   }
 }
 
-.summaries {
+.case-summary {
   .summary-head {
     border-bottom: 2px solid $tribune-yellow;
     margin-bottom: 1em;
@@ -12,15 +12,14 @@
 
   h2 {
     display: inline-block;
+    line-height: 35px;
     margin-bottom: .3em;
-    padding-top: 40px;
   }
 
   .folder {
     float: left;
-    height: 85px;
+    height: 35px;
     margin-right: .5em;
-    padding-top: 50px;
   }
 }
 

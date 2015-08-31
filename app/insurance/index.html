@@ -8,9 +8,9 @@
 {%block nav %}
 <nav id="menu" class="menu">
   <ul>
-    <a href="/{{META.section_1_slug }}"><li>{{META.section_1_title }}</li></a>
-    <a href="/{{META.section_2_slug }}"><li>{{META.section_2_title }}</li></a>
-    <a href="/{{META.section_3_slug }}"><li class="selected">{{META.section_3_title }}</li></a>
+    <a href="{{PATH_PREFIX}}{{META.section_1_slug }}"><li>{{META.section_1_title }}</li></a>
+    <a href="{{PATH_PREFIX}}{{META.section_2_slug }}"><li>{{META.section_2_title }}</li></a>
+    <a href="{{PATH_PREFIX}}{{META.section_3_slug }}"><li class="selected">{{META.section_3_title }}</li></a>
   </ul>
 </nav>
 {% endblock %}
@@ -25,7 +25,7 @@
   </section>
 
   <figure class="prose photo top">
-    <img src="{{ INSURANCE.img_1 }}" />
+    <img src="{{PATH_PREFIX}}assets/images/{{ INSURANCE.img_1 }}" />
     <figcaption class="caption credit">{{INSURANCE.credit_1 }}</figcaption>
     <figcaption class="caption">{{ INSURANCE.caption_1 }}</figcaption>
   </figure>
@@ -60,15 +60,15 @@
 
 {% block more %}
 <div class="more-story">
-  <a href="../{{ META.section_1_slug }}">
-    <img src="{{ FOOTER.workers_sub_img }}" />
+  <a href="{{PATH_PREFIX}}{{ META.section_1_slug }}">
+    <img src="{{PATH_PREFIX}}assets/images/{{ FOOTER.workers_sub_img }}" />
     <h4>{{ META.section_1_title }}</h4>
   </a>
   <p>{{ FOOTER.workers_sub_desc }}</p>
 </div>
 <div class="more-story">
-  <a href="../{{ META.section_2_slug }}">
-    <img src="{{ FOOTER.pros_sub_img }}" />
+  <a href="{{PATH_PREFIX}}{{ META.section_2_slug }}">
+    <img src="{{PATH_PREFIX}}assets/images/{{ FOOTER.pros_sub_img }}" />
     <h4>{{ META.section_2_title }}</h4>
   </a>
   <p>{{ FOOTER.pros_sub_desc }}</p>
