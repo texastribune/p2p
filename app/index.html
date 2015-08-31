@@ -24,7 +24,7 @@
   </section>
 
   <figure class="prose photo top">
-    <img src="{{ WORKERS.img_1 }}" />
+    <img src="assets/images/{{ WORKERS.img_1 }}" />
     <figcaption class="caption credit">{{WORKERS.credit_1 }}</figcaption>
     <figcaption class="caption">{{ WORKERS.caption_1 }}</figcaption>
   </figure>
@@ -67,7 +67,10 @@
       <h4>{{ CARDS.card1_title }}</h4>
     </div>
     {{ CARDS.card1_desc }}
-    <a class="ghost-button" href="{{PATH_PREFIX}}cases#case1">Learn more</a>
+    <a class="ghost-button open-popup-link" href="#test-popup">Learn more</a>
+    <div id="test-popup" class="white-popup mfp-hide">
+      Popup content
+    </div>
   </section>
 
   <section class="prose graf">
