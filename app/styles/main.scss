@@ -18,3 +18,10 @@ img {
 .banner-ad {
   text-align: center;
 }
+
+.box-ad {
+  @include media($non-mobile) {
+    float: left;
+    margin: 1em 1em 1em 0;
+  }
+}

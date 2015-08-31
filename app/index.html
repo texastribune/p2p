@@ -47,17 +47,36 @@
   <section class="prose graf first">
     {{ WORKERS.text_1 }}
   </section>
+
+  <div class="ad-container box-ad" id="div-gpt-ad-1406570316312-1">
+    <script>
+      googletag.cmd.push(function() {
+        googletag.display('div-gpt-ad-1406570316312-1');
+      });
+    </script>
+  </div>
+
+  <section class="prose graf">
+    {{ WORKERS.text_2 }}
+  </section>
+
   <div class="prose inline-feature">
     <h3>Investigative Findings</h3>
       {{ META.findings }}
   </div>
+
   <section class="prose graf">
-    {{ WORKERS.text_2 }}
-    <!-- <blockquote class="prose-block">
-      <p class="blockquote">{{ WORKERS.block_quote }}</p>
-      <p class="blockquote-source">— {{ WORKERS.block_quote_source }}</p>
-    </blockquote> -->
+    {{ WORKERS.text_3 }}
+
+    <figure class="prose photo">
+      <img src="{{PATH_PREFIX}}assets/images/{{ WORKERS.img_2 }}" />
+      <figcaption class="caption credit">{{WORKERS.credit_2 }}</figcaption>
+      <figcaption class="caption">{{ WORKERS.caption_2 }}</figcaption>
+    </figure>
+
+    {{WORKERS.text_4}}
   </section>
+
   <section class="prose case-card right">
     <h3>More cases</h3>
     <div class="top">
@@ -74,35 +93,13 @@
             <h2>{{ CARDS.card1_title }}</h2>
           </div>
           {{ CARDS.card1 }}
-      </div>
-    </div>
-  </section>
-  <section class="prose graf">
-    {{ WORKERS.text_3 }}
-  </section>
-
-  <section class="prose case-card left">
-    <h3>More cases</h3>
-    <div class="top">
-      <img src="{{PATH_PREFIX}}assets/images/folder.png">
-      <h4>{{ CARDS.card2_title }}</h4>
-    </div>
-    {{ CARDS.card2_desc }}
-    <a class="ghost-button open-popup-link" href="#card2">Learn more</a>
-    <!-- Lightbox content -->
-    <div id="card2" class="white-popup mfp-hide">
-      <div class="case-summary">
-        <div class="summary-head">
-            <img class="folder" src="{{PATH_PREFIX}}assets/images/folder.png">
-            <h2>{{ CARDS.card2_title }}</h2>
-          </div>
-          {{ CARDS.card2 }}
+          <p><i> &mdash; Liz Crampton</i></p>
       </div>
     </div>
   </section>
 
   <section class="prose graf">
-    {{WORKERS.text_4}}
+    {{ WORKERS.text_5 }}
   </section>
 
   <figure class="prose photo inline">
@@ -110,14 +107,21 @@
     <figcaption class="caption credit">{{WORKERS.credit_2 }}</figcaption>
     <figcaption class="caption">{{ WORKERS.caption_2 }}</figcaption>
   </figure>
-  <section class="prose graf">
-    {{ WORKERS.text_5 }}
-  </section>
 
   <section class="prose graf">
     {{ WORKERS.text_6 }}
-    <p class="disclosure">Liz Crampton contributed to this report.</p>
   </section>
+
+  <figure class="prose photo">
+    PULLOUT WILL GO HERE
+    <figcaption class="caption credit">{{WORKERS.credit_2 }}</figcaption>
+    <figcaption class="caption">{{ WORKERS.caption_2 }}</figcaption>
+  </figure>
+
+  <section class="prose graf">
+    {{ WORKERS.text_7 }}
+  </section>
+
 {% endblock %}
 
 {% block more %}
