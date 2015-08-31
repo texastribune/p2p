@@ -14,6 +14,7 @@
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ PATH_PREFIX }}styles/main.css">
   {% endblock %}
+  {% include 'includes/_ads.html' %}
 </head>
 <body>
   <header class="masthead app-bar promote-layer">
@@ -33,6 +34,14 @@
 
   <div class="story-container">
     {% block content %}{% endblock %}
+  </div>
+
+  <div class="ad-container banner-ad bottom" id="div-gpt-ad-1406570316312-2">
+    <script>
+      googletag.cmd.push(function() {
+        googletag.display('div-gpt-ad-1406570316312-2');
+      });
+    </script>
   </div>
 
   <div class="story-container comments" id="disqus_thread"></div>
@@ -58,13 +67,6 @@
       <p>{{ FOOTER.about }}</p>
     </div>
   </div>
-  <!-- <div class="ad-container banner-ad bottom" id="div-gpt-ad-1406570316312-2">
-    <script>
-      googletag.cmd.push(function() {
-        googletag.display('div-gpt-ad-1406570316312-2');
-      });
-    </script>
-  </div> -->
   <footer class="footer">
     <div class="footer-container">
       <div>

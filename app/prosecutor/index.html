@@ -9,7 +9,7 @@
   <ul>
     <a href="/{{META.section_1_slug }}"><li>{{META.section_1_title }}</li></a>
     <a href="/{{META.section_2_slug }}"><li class="selected">{{META.section_2_title }}</li></a>
-    <a  class="inactive" href="{{META.section_3_slug }}"><li>{{META.section_3_title }}<br><span>(Coming Sept. 11)</span></li></a>
+    <a href="{{META.section_3_slug }}"><li>{{META.section_3_title }}</li></a>
   </ul>
 </nav>
 {% endblock %}
@@ -61,15 +61,13 @@
 <div class="more-story">
   <a href="../{{ META.section_1_slug }}">
     <img src="{{ FOOTER.workers_sub_img }}" />
-    <p class="upcoming">(Live on Sept. 10)</p>
     <h4>{{ META.section_1_title }}</h4>
   </a>
   <p>{{ FOOTER.workers_sub_desc }}</p>
 </div>
-<div class="more-story inactive">
+<div class="more-story">
   <a href="../{{ META.section_3_slug }}">
     <img src="{{ FOOTER.insur_sub_img }}" />
-    <p class="upcoming">(Coming Sept. 11)</p>
     <h4>{{ META.section_3_title }}</h4>
   </a>
   <p>{{ FOOTER.insur_sub_desc }}</p>
