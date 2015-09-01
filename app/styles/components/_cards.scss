@@ -26,8 +26,6 @@
 .case-card {
   border-bottom: 2px solid $tribune-yellow;
   border-top: 2px solid $tribune-yellow;
-  margin: 1em 0;
-  padding: 0 1em;
 
   @include media($non-mobile) {
     border: 0;
@@ -52,21 +50,20 @@
 
   img {
     float: left;
-    height: 2.5em;
+    height: 2em;
     margin-right: .5em;
   }
 
-  h2 {
+  h3 {
     float: left;
-    font-family: $base-sans-serif;
-    font-size: 1.4em;
-    line-height: 1.5em;
+    line-height: 2em;
     margin: .25em 0 0;
   }
 
   p {
     font-family: $base-sans-serif;
     font-size: .875em;
+    margin: 0;
   }
 
   .ghost-button {
@@ -74,7 +71,7 @@
     float: left;
     font-size: .85em;
     font-weight: 700;
-    margin-bottom: .75em;
+    margin-top: .75em;
     padding: .5em;
     width: 48%;
 
