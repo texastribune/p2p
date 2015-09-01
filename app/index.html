@@ -46,17 +46,6 @@
 
   <section class="prose graf first">
     {{ WORKERS.text_1 }}
-  </section>
-
-  <div class="ad-container box-ad" id="div-gpt-ad-1406570316312-1">
-    <script>
-      googletag.cmd.push(function() {
-        googletag.display('div-gpt-ad-1406570316312-1');
-      });
-    </script>
-  </div>
-
-  <section class="prose graf">
     {{ WORKERS.text_2 }}
   </section>
 
@@ -69,24 +58,27 @@
     {{ WORKERS.text_3 }}
 
     <figure class="prose photo">
-      <img src="{{PATH_PREFIX}}assets/images/{{ WORKERS.img_2 }}" />
-      <figcaption class="caption credit">{{WORKERS.credit_2 }}</figcaption>
-      <figcaption class="caption">{{ WORKERS.caption_2 }}</figcaption>
+      <iframe width="100%" height="358" src="https://www.youtube.com/embed/sZIsNNTLhAI" frameborder="0" allowfullscreen></iframe>
+      <figcaption class="caption credit">{{WORKERS.vid_credit }}</figcaption>
+      <figcaption class="caption">{{ WORKERS.vid_caption }}</figcaption>
     </figure>
 
     {{WORKERS.text_4}}
+    {{ WORKERS.text_5 }}
   </section>
 
-  <section class="prose case-card right">
-    <h3>More cases</h3>
+  <section class="prose inline-feature case-card right">
     <div class="top">
       <img src="{{PATH_PREFIX}}assets/images/folder.png">
-      <h4>{{ CARDS.card1_title }}</h4>
+      <h2>Other Cases</h2>
     </div>
-    {{ CARDS.card1_desc }}
-    <a class="ghost-button open-popup-link" href="#card1">Learn more</a>
+    {{ CARDS.cards_intro }}
+    <a class="ghost-button open-popup-link" href="#card1">{{ CARDS.card1_title }}</a>
+    <a class="ghost-button open-popup-link" href="#card2">{{ CARDS.card2_title }}</a>
+    <a class="ghost-button open-popup-link" href="#card3">{{ CARDS.card3_title }}</a>
+    <a class="ghost-button open-popup-link" href="#card4">{{ CARDS.card4_title }}</a>
     <!-- Lightbox content -->
-    <div id="card1" class="white-popup mfp-hide">
+    <div id="card1" class="white-popup mfp-hide zoom-anim-dialog">
       <div class="case-summary">
         <div class="summary-head">
             <img class="folder" src="{{PATH_PREFIX}}assets/images/folder.png">
@@ -96,20 +88,53 @@
           <p><i> &mdash; Liz Crampton</i></p>
       </div>
     </div>
+    <div id="card2" class="white-popup mfp-hide zoom-anim-dialog">
+      <div class="case-summary">
+        <div class="summary-head">
+            <img class="folder" src="{{PATH_PREFIX}}assets/images/folder.png">
+            <h2>{{ CARDS.card2_title }}</h2>
+          </div>
+          {{ CARDS.card2 }}
+          <p><i> &mdash; Liz Crampton</i></p>
+      </div>
+    </div>
+    <div id="card3" class="white-popup mfp-hide zoom-anim-dialog">
+      <div class="case-summary">
+        <div class="summary-head">
+            <img class="folder" src="{{PATH_PREFIX}}assets/images/folder.png">
+            <h2>{{ CARDS.card3_title }}</h2>
+          </div>
+          {{ CARDS.card3 }}
+          <p><i> &mdash; Liz Crampton</i></p>
+      </div>
+    </div>
+    <div id="card4" class="white-popup mfp-hide zoom-anim-dialog">
+      <div class="case-summary">
+        <div class="summary-head">
+            <img class="folder" src="{{PATH_PREFIX}}assets/images/folder.png">
+            <h2>{{ CARDS.card4_title }}</h2>
+          </div>
+          {{ CARDS.card4 }}
+          <p><i> &mdash; Liz Crampton</i></p>
+      </div>
+    </div>
   </section>
-
-  <section class="prose graf">
-    {{ WORKERS.text_5 }}
-  </section>
-
-  <figure class="prose photo inline">
-    <img src="{{PATH_PREFIX}}assets/images/{{ WORKERS.img_2 }}" />
-    <figcaption class="caption credit">{{WORKERS.credit_2 }}</figcaption>
-    <figcaption class="caption">{{ WORKERS.caption_2 }}</figcaption>
-  </figure>
 
   <section class="prose graf">
     {{ WORKERS.text_6 }}
+    {{ WORKERS.text_7 }}
+  </section>
+
+  <div class="ad-container box-ad" id="div-gpt-ad-1406570316312-1">
+    <script>
+      googletag.cmd.push(function() {
+        googletag.display('div-gpt-ad-1406570316312-1');
+      });
+    </script>
+  </div>
+
+  <section class="prose graf">
+    {{ WORKERS.text_8 }}
   </section>
 
   <figure class="prose photo">
@@ -119,7 +144,7 @@
   </figure>
 
   <section class="prose graf">
-    {{ WORKERS.text_7 }}
+    {{ WORKERS.text_9 }}
   </section>
 
 {% endblock %}
