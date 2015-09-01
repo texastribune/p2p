@@ -20,7 +20,7 @@ $(window).load(function() {
   //lightboxes
   $('.open-popup-link').magnificPopup({
     type:'inline',
-    fixedContentPos: false,
+    fixedContentPos: true,
 		fixedBgPos: true,
 		overflowY: 'auto',
 		closeBtnInside: true,
