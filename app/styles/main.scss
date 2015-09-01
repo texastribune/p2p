@@ -1,7 +1,7 @@
 @import 'node_modules/newsapps-styles/init-helpers';
 @import 'node_modules/newsapps-styles/initialize';
 
-$non-mobile: new-breakpoint(min-width 550px);
+$non-mobile: new-breakpoint(min-width 600px);
 
 @import 'components/header';
 @import 'components/nav';
@@ -15,13 +15,19 @@ img {
   max-width: 100%;
 }
 
-.banner-ad {
+.ad-container {
+  border-bottom: 1px solid $border-gray;
+  border-top: 1px solid $border-gray;
+  margin: 1em;
+  padding: .5em 0;
   text-align: center;
-}
 
-.box-ad {
   @include media($non-mobile) {
-    float: left;
-    margin: 1em 1em 1em 0;
+    border: 0;
+  
+    &.box-ad {
+      float: left;
+      margin-left: 0;
+    }
   }
 }

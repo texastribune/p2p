@@ -24,11 +24,7 @@
 }
 
 .case-card {
-  border-bottom: 2px solid $tribune-yellow;
-  border-top: 2px solid $tribune-yellow;
-
-  @include media($non-mobile) {
-    border: 0;
+  @include media($default-desktop) {
 
     &.left {
       border-right: 2px solid $tribune-yellow;

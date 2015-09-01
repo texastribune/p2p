@@ -40,19 +40,19 @@
 
   ul {
     margin: 0;
+  }
 
-    li {
-      list-style: none;
-      display: inline-block;
-      width: 49%;
-      text-align: center;
-      margin: 0;
-      padding: .75em 0;
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: .75em 0;
+    text-align: center;
+    width: 49%;
 
-      &:last-child {
-        border-left: 1px solid $border-gray;
-        margin-bottom: 0;
-      }
+    &:last-child {
+      border-left: 1px solid $border-gray;
+      margin-bottom: 0;
     }
   }
 
@@ -93,17 +93,24 @@
 }
 
 .inline-feature {
-  border-left: 2px solid $tribune-yellow;
+  border-bottom: 1px solid $tribune-yellow;
+  border-top: 1px solid $tribune-yellow;
   margin: 1em 0;
-  padding: .25em 1em;
+  padding: 1em;
   position: relative;
 
   @include media($default-desktop) {
+    border-bottom: 0;
+    border-left: 2px solid $tribune-yellow;
+    border-top: 0;
     float: right;
-    margin-right: 1em;
     margin: .75em 0 .75em 3%;
-    padding-left: 1em;
+    padding: .25em 1em;
     width: 46%;
+  }
+
+  h3 {
+    margin: 0;
   }
 
   ul {
@@ -111,26 +118,18 @@
     font-weight: 400;
     line-height: 1.4em;
     margin: 1em 0 0 1em;
+  }
 
-    li {
-      margin-bottom: 1em;
+  li {
+    margin-bottom: 1em;
 
-      &:last-child {
-        margin-bottom: 0;
-      }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
 
 .prose {
-  @include media($default-desktop) {
-    &.inline-feature {
-      h3 {
-        margin: 0;
-      }
-    }
-  }
-
   h2 {
     line-height: 1em;
     margin: 1em 0;
@@ -141,7 +140,6 @@
     font-size: 1em;
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 1em 0;
     text-transform: uppercase;
   }
 

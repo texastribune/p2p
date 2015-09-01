@@ -1,5 +1,4 @@
 $nav-bp: new-breakpoint(min-width 900px);
-$full-nav: new-breakpoint(min-width 600px);
 $selected-li: #99d0d3;
 
 
@@ -10,7 +9,7 @@ $selected-li: #99d0d3;
 .menu {
   background-color: $href-teal;
 
-  @include media($full-nav) {
+  @include media($non-mobile) {
     background-color: $white;
     border-bottom: 2px solid $href-teal;
   }
@@ -36,7 +35,7 @@ $selected-li: #99d0d3;
     letter-spacing: .02em;
     text-transform: uppercase;
 
-    @include media($full-nav) {
+    @include media($non-mobile) {
       color: $bodytext-black;
     }
 
@@ -70,7 +69,7 @@ $selected-li: #99d0d3;
     text-align: center;
     width: 31%;
 
-    @include media($full-nav) {
+    @include media($non-mobile) {
       background-color: $white;
       border-radius: 0;
       border: 0;
