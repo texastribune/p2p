@@ -3,13 +3,12 @@
 
   h3 {
     @include clearfix;
+    margin: 1em 0 .5em;
   }
 
   h4 {
-    font-size: 1.1em;
-    font-weight: 700;
-    letter-spacing: .02em;
-    text-transform: uppercase;
+    font-size: 1.2em;
+    text-transform: capitalize;
   }
 
   p {
@@ -32,7 +31,7 @@
     @include clearfix;
     font-size: 1em;
     line-height: 1.4em;
-    margin-bottom: 1.25em;;
+    margin-bottom: 1.25em;
 
     @include media($default-desktop) {
       margin-bottom: 1em;
@@ -54,39 +53,11 @@
     img {
       float: left;
       margin-right: 1em;
-      width: 150px;
+      width: 175px;
     }
 
     &:last-child {
       margin: 0;
-    }
-  }
-
-  .upcoming {
-    visibility: hidden;
-    font-style: italic;
-    margin-bottom: 0;
-    font-size: 1em;
-  }
-
-  .inactive {
-    pointer-events: none;
-
-    img {
-      filter: grayscale(100%);
-    }
-
-    h4 {
-      color: $border-gray;
-      margin-top: .25em;
-    }
-
-    p {
-      color: $border-gray;
-
-      &.upcoming {
-        visibility: visible;
-      }
     }
   }
 }
