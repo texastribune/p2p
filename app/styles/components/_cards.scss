@@ -56,23 +56,20 @@
     margin: .25em 0 0;
   }
 
-  p {
-    font-family: $base-sans-serif;
-    font-size: .875em;
-    margin: 0;
-  }
-
   .ghost-button {
     border-radius: 0;
-    float: left;
     font-size: .85em;
     font-weight: 700;
     margin-top: .75em;
     padding: .5em;
-    width: 48%;
 
-    &:nth-child(even) {
-      float: right;
+    &.half {
+      float: left;
+      width: 48%;
+
+      &:nth-child(even) {
+        float: right;
+      }
     }
 
     &:hover {
