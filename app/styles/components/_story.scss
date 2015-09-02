@@ -22,14 +22,19 @@
 }
 
 .meta {
+  font-family: $base-sans-serif;
   font-size: .875em;
   margin: 1em 0;
 }
 
 .headline {
   font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
-  font-size: 1.5em;
+  font-size: 1.65em;
   font-weight: 400;
+
+  @include media($default-mobile) {
+    font-size: 1.3em;
+  }
 }
 
 .share-buttons {
@@ -111,6 +116,7 @@
 
   h3 {
     margin: 0;
+    text-transform: uppercase;
   }
 
   ul {
@@ -139,8 +145,15 @@
     font-family: "Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;
     font-size: 1em;
     font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    letter-spacing: .02em;
+  }
+
+  &.graf {
+    h3 {
+      font-size: 1.25em;
+      line-height: 1.2em;
+      margin: 1em 0;
+    }
   }
 
   .blockquote {

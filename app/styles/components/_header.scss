@@ -84,4 +84,8 @@ $small-header: new-breakpoint(max-width 400px);
 .logo {
   margin: 2em 1em;
   text-align: center;
+
+  @include media($med-header) {
+    margin: 1em;
+  }
 }
