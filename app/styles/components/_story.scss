@@ -16,7 +16,25 @@
       font-size: 5.1em;
       font-weight: 700;
       line-height: 1em;
-      margin: -9px 3px;
+    }
+  }
+
+  &.main {
+    p:first-child:first-letter {
+      margin: -9px 3px -9px 0;
+    }
+  }
+
+  &.prosecutor {
+    p:first-child:first-letter {
+      font-size: 4.7em;
+      margin: -5px 4px -5px 0;
+    }
+  }
+
+  &.insurance {
+    p:first-child:first-letter {
+      margin: -9px 3px -9px 0;
     }
   }
 }
