@@ -1,10 +1,4 @@
 $nav-bp: new-breakpoint(min-width 900px);
-$selected-li: #99d0d3;
-
-
-//make menu above header on mobile???
-
-
 
 .menu {
   background-color: $href-teal;
@@ -29,7 +23,7 @@ $selected-li: #99d0d3;
   }
 
   a {
-    color: $selected-li;
+    color: $light-teal;
     cursor: pointer;
     font-weight: 400;
     letter-spacing: .02em;
@@ -71,8 +65,8 @@ $selected-li: #99d0d3;
 
     @include media($non-mobile) {
       background-color: $white;
-      border-radius: 0;
       border: 0;
+      border-radius: 0;
       font-size: .9em;
       margin: 0;
       width: 33.3%;
@@ -88,15 +82,15 @@ $selected-li: #99d0d3;
     }
 
     &:hover {
-      border-color: $selected-li;
+      border-color: $light-teal;
     }
 
     &.selected {
-      background-color: $selected-li;
+      background-color: $light-teal;
       color: $bodytext-black;
 
       &:hover {
-        background-color: $selected-li;
+        background-color: $light-teal;
         color: $bodytext-black;
       }
     }

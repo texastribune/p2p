@@ -17,8 +17,8 @@
 {% block content %}
   <h2 class="headline">{{ PROSECUTOR.headline }}</h2>
   <section class="meta prose">
-    <span class="byline">By <a href="http://www.texastribune.org/about/staff/jay-root">Jay Root</a>
-      and <a href="http://www.statesman.com/staff/tony-plohetski/">Tony Plohetski</a></span>
+    <span class="byline">By <a href="http://www.statesman.com/staff/tony-plohetski/">Tony Plohetski</a>
+     and <a href="http://www.texastribune.org/about/staff/jay-root">Jay Root</a></span>
     &nbsp;|&nbsp;
     <span class="date">{{PROSECUTOR.date }}</span>
   </section>
@@ -79,6 +79,20 @@
     {{ PROSECUTOR.text_4 }}
   </section>
 
+  <section class="prose graf share-buttons">
+    <ul>
+      <li>
+        <a href="https://twitter.com/intent/tweet?text={{ META.section_2_title | urlencode}}%3A%20{{ PROSECUTOR.headline | urlencode }}%20http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{META.section_2_slug | urlencode }}&via=texastribune" title="share on Twitter" class="social-share" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="share" href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{META.section_2_slug | urlencode }}&redirect_uri=http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{META.section_2_slug | urlencode }}" title="share on Facebook" class="social-share" target="_blank">
+          <i class="fa fa-facebook"></i>
+        </a>
+      </li>
+    </ul>
+  </section>
 
 {% endblock %}
 
