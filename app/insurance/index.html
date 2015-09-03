@@ -1,7 +1,6 @@
 {% extends "_base.html" %}
 
 {% block styles %}
-<link rel="stylesheet" href="../styles/main.css">
 {{ super() }}
 {% endblock %}
 
@@ -33,12 +32,12 @@
   <section class="prose graf share-buttons">
     <ul>
       <li>
-        <a href="https://twitter.com/intent/tweet?text={{ INSURANCE.headline | urlencode }}%20http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{META.section_3_slug | urlencode }}&via=texastribune" title="share on Twitter" class="social-share" target="_blank">
+        <a href="https://twitter.com/intent/tweet?text={{ META.section_3_title | urlencode}}%3A%20{{ INSURANCE.headline | urlencode }}%20http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{META.section_3_slug | urlencode }}&via=texastribune" title="share on Twitter" class="social-share" target="_blank">
           <i class="fa fa-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="share" href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{META.section_3_slug | urlencode }}&redirect_uri=http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F{{META.section_3_slug | urlencode }}" title="share on Facebook" class="social-share" target="_blank">
+        <a class="share" href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fmoose.texastribune.org%2Fpaid-to-prosecute%2F{{META.section_3_slug | urlencode }}&redirect_uri=http%3A%2F%2Fmoose.texastribune.org%2Fpaid-to-prosecute%2F{{META.section_3_slug | urlencode }}" title="share on Facebook" class="social-share" target="_blank">
           <i class="fa fa-facebook"></i>
         </a>
       </li>
@@ -71,7 +70,7 @@
   </section>
 
     <figure class="prose photo">
-      <iframe width="100%" height="420" src="https://www.youtube.com/embed/sZIsNNTLhAI" frameborder="0" allowfullscreen></iframe>
+      <iframe width="640" height="360" src="https://www.youtube.com/embed/sZIsNNTLhAI" frameborder="0" allowfullscreen></iframe>
       <figcaption class="caption credit">{{WORKERS.vid_credit }}</figcaption>
       <figcaption class="caption">{{ WORKERS.vid_caption }}</figcaption>
     </figure>
@@ -79,10 +78,10 @@
   <section class="prose graf">
     {{ INSURANCE.text_4 }}
 
-    <blockquote class="prose-block">
-      <p class="blockquote">{{ INSURANCE.block_quote }}</p>
-      <p class="blockquote-source">— {{ INSURANCE.block_quote_source }}</p>
-    </blockquote>
+  <blockquote class="prose-block">
+    <p class="blockquote">{{ INSURANCE.block_quote }}</p>
+    <p class="blockquote-source">— {{ INSURANCE.block_quote_source }}</p>
+  </blockquote>
 
     {{ INSURANCE.text_5 }}
   </section>

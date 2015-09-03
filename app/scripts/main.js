@@ -29,6 +29,9 @@ $(window).load(function() {
 		removalDelay: 300,
 		mainClass: 'my-mfp-zoom-in'
   });
+
+  //fitvids
+  $('#main-content').fitVids();
 });
 
 //sets nav to sticky at certain height

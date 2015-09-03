@@ -32,7 +32,7 @@
     <img src="{{ PATH_PREFIX }}assets/images/p2p-logo.svg">
   </div>
 
-  <div class="story-container">
+  <div id="main-content" class="story-container">
     {% block content %}{% endblock %}
   </div>
 
@@ -106,6 +106,7 @@
 {% block script %}
 <script src="{{ PATH_PREFIX }}scripts/libs/jquery-1.11.3.min.js"></script>
 <script src="{{ PATH_PREFIX }}scripts/libs/magnific-popup.min.js"></script>
+<script src="{{ PATH_PREFIX }}scripts/libs/fitvids.js"></script>
 <script src="{{ PATH_PREFIX }}scripts/main.js"></script>
 {% endblock %}
 {% include 'includes/_google_analytics.html' %}
