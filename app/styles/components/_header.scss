@@ -82,20 +82,25 @@ $small-header: new-breakpoint(max-width 400px);
 }
 
 .social {
-  float: right;
-  margin: .75em 1em .75em 0;
+  display: none;
 
-  li {
-    display: inline-block;
-    padding: 0 .25em;
-  }
+  @include media($default-desktop) {
+    display: block;
+    float: right;
+    margin: .75em 1em .75em 0;
 
-  .fa {
-    font-size: 1.25em;
-    color: $white;
+    li {
+      display: inline-block;
+      padding: 0 .25em;
+    }
 
-    &:hover {
-      color: rgba(255, 255, 255, .75);
+    .fa {
+      font-size: 1.25em;
+      color: $white;
+
+      &:hover {
+        color: rgba(255, 255, 255, .75);
+      }
     }
   }
 }
