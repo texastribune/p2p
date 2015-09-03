@@ -99,4 +99,31 @@ $nav-bp: new-breakpoint(min-width 900px);
   &.menu-open {
     display: block;
   }
+
+  .social-share {
+    display: none;
+
+    li {
+       position: fixed;
+       padding: .9em .5em;
+       right: 0;
+       top: 0;
+       width: 3em;
+
+       &:hover {
+         .fa {
+           color: $white;
+         }
+       }
+    }
+
+    .twitter {
+      right: 3em;
+    }
+
+    .fa {
+      color: $href-teal;
+      font-size: 1.2em;
+    }
+  }
 }
