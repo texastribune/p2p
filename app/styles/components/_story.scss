@@ -113,6 +113,14 @@
     margin-bottom: .5em;
     text-align: right;
   }
+
+  &.video {
+    padding-bottom: 0;
+
+    .credit {
+      margin-top: .5em;
+    }
+  }
 }
 
 .inline-feature {
@@ -171,6 +179,7 @@
       font-size: 1.25em;
       line-height: 1.2em;
       margin: 1em 0;
+      text-transform: capitalize;
     }
   }
 
