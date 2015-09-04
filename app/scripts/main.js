@@ -67,7 +67,6 @@ getWindowSize();
 
 $(window).resize(function() {
     getWindowSize();
-    console.log(windowSize);
     if (windowSize < 601) {
       $('#menu .social-share').hide();
     }

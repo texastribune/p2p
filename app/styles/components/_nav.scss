@@ -1,11 +1,13 @@
 $nav-bp: new-breakpoint(min-width 900px);
+$nav-mobile: new-breakpoint(max-width 600px);
 
 .menu {
-  background-color: $href-teal;
+  background-color: $white;
+  border-bottom: 2px solid $href-teal;
 
-  @include media($non-mobile) {
-    background-color: $white;
-    border-bottom: 2px solid $href-teal;
+  @include media($nav-mobile) {
+    background-color: $href-teal;
+    border-bottom: 0;
   }
 
   &.sticky {
@@ -17,10 +19,10 @@ $nav-bp: new-breakpoint(min-width 900px);
 
     li {
       padding: 1em .75em;
-      width: 31%;
+      width: auto;
 
-      @include media($non-mobile) {
-        width: auto;
+      @include media($nav-mobile) {
+        width: 31%;
       }
 
       @include media($nav-bp) {
@@ -35,14 +37,14 @@ $nav-bp: new-breakpoint(min-width 900px);
   }
 
   a {
-    color: $light-teal;
+    color: $bodytext-black;
     cursor: pointer;
     font-weight: 400;
     letter-spacing: .02em;
     text-transform: uppercase;
 
-    @include media($non-mobile) {
-      color: $bodytext-black;
+    @include media($nav-mobile) {
+      color: $light-teal;
     }
 
     &:hover {
@@ -51,35 +53,36 @@ $nav-bp: new-breakpoint(min-width 900px);
   }
 
   li {
-    border: 1px solid $href-teal;
-    border-radius: 5px;
+    background-color: $white;
     float: left;
-    font-size: .75em;
-    margin: 1%;
+    font-size: .85em;
+    margin: 0;
     padding: 1em .75em;
     text-align: center;
-    width: 31%;
+    width: 33.3%;
 
-    @include media($non-mobile) {
-      background-color: $white;
-      border: 0;
-      border-radius: 0;
-      font-size: .85em;
-      margin: 0;
-      width: 33.3%;
+    &:hover {
+      background-color: $href-teal;
+      color: $white;
+
+    }
+
+    @include media($nav-mobile) {
+      background-color: $href-teal;
+      border: 1px solid $href-teal;
+      border-radius: 5px;
+      font-size: .75em;
+      margin: 1%;
+      width: 31%;
 
       &:hover {
-        background-color: $href-teal;
-        color: $white;
+        border-color: $light-teal;
+        color: $light-teal;
       }
     }
 
     @include media($nav-bp) {
       font-size: 1em;
-    }
-
-    &:hover {
-      border-color: $light-teal;
     }
 
     &.selected {
@@ -101,7 +104,7 @@ $nav-bp: new-breakpoint(min-width 900px);
     display: none;
 
     li {
-      padding: .85em .75em .65em .75em;
+      padding: .85em .75em .65em;
 
       &:hover {
         background: none;
