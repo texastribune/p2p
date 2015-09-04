@@ -14,12 +14,16 @@ $nav-bp: new-breakpoint(min-width 900px);
     top: 0;
     width: 100%;
     z-index: 1000;
+
+    li {
+      padding: 1em 2em;
+      width: auto;
+    }
   }
 
   ul {
     @include clearfix;
     margin: 0 auto;
-    max-width: 1081px;
   }
 
   a {
@@ -98,6 +102,17 @@ $nav-bp: new-breakpoint(min-width 900px);
 
   &.menu-open {
     display: block;
+  }
+
+  .home {
+    display: none;
+
+    li {
+      padding: .85em .75em .65em .75em;
+      &:hover {
+        background: none;
+      }
+    }
   }
 
   .social-share {

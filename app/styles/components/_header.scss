@@ -1,5 +1,5 @@
 
-$med-header: new-breakpoint(max-width 560px);
+$med-header: new-breakpoint(max-width 599px);
 $small-header: new-breakpoint(max-width 400px);
 
 .masthead {
@@ -82,26 +82,26 @@ $small-header: new-breakpoint(max-width 400px);
 }
 
 .social {
-  display: none;
+  margin: .75em 1em .75em 0;
+  position: absolute;
+  right: 0;
 
-  @include media($default-desktop) {
-    display: block;
-    float: right;
-    margin: .75em 1em .75em 0;
+  li {
+    display: inline-block;
+    padding: 0 .5em;
+  }
 
-    li {
-      display: inline-block;
-      padding: 0 .25em;
+  .fa {
+    font-size: 1.25em;
+    color: $white;
+
+    &:hover {
+      color: rgba(255, 255, 255, .75);
     }
+  }
 
-    .fa {
-      font-size: 1.25em;
-      color: $white;
-
-      &:hover {
-        color: rgba(255, 255, 255, .75);
-      }
-    }
+  @include media($med-header) {
+    display: none;
   }
 }
 

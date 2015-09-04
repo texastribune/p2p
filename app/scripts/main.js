@@ -39,9 +39,11 @@ $(window).scroll(function () {
   var navHeight = $('.masthead .menu-container').height();
   if( $(window).scrollTop() > navHeight && !($('#menu').hasClass('sticky'))){
     $('#menu').addClass('sticky');
-    // $('#menu .social-share').show();
+    $('#menu .social-share').show();
+    $('#menu .home').show();
   } else if ($(window).scrollTop() < navHeight){
     $('#menu').removeClass('sticky');
-    // $('#menu .social-share').hide();
+    $('#menu .social-share').hide();
+    $('#menu .home').hide();
   }
 });
