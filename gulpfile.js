@@ -73,7 +73,7 @@ gulp.task('templates', function() {
   return gulp.src(['app/**/{*,!_*}.html', '!app/**/_*.html'])
     .pipe(nunjuckified)
     .pipe(gulp.dest('.tmp'))
-    .pipe($.minifyHtml())
+    .pipe($.minifyHtml({conditionals: true}))
     .pipe(gulp.dest('dist'))
     .pipe($.size({title: 'html'}));
 });

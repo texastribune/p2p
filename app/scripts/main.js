@@ -32,8 +32,31 @@ $(window).load(function() {
 
   //fitvids
   $('#main-content').fitVids();
+
+  //ie svgs
+  function svgasimg() {
+  return document.implementation.hasFeature(
+    'http://www.w3.org/TR/SVG11/feature#Image', '1.1');
+}
+
+if (!svgasimg()){
+  var e = document.getElementsByTagName('img');
+  if (!e.length){
+    e = document.getElementsByTagName('IMG');
+  }
+  for (var i=0, n=e.length; i<n; i++){
+    var img = e[i],
+        src = img.getAttribute('src');
+    if (src.match(/svgz?$/)) {
+      /* URL ends in svg or svgz */
+      img.setAttribute('src',
+             img.getAttribute('data-fallback'));
+    }
+  }
+}
 });
 
+//nav bar fanciness
 var windowSize;
 
 function getWindowSize() {
@@ -53,7 +76,6 @@ $(window).resize(function() {
     }
 });
 
-//sets nav to sticky at certain height
 $(window).scroll(function () {
   var navHeight = $('.masthead .menu-container').height();
   if( $(window).scrollTop() > navHeight && !($('#menu').hasClass('sticky'))){
