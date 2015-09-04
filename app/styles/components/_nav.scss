@@ -16,8 +16,16 @@ $nav-bp: new-breakpoint(min-width 900px);
     z-index: 1000;
 
     li {
-      padding: 1em 2em;
-      width: auto;
+      padding: 1em .75em;
+      width: 31%;
+
+      @include media($non-mobile) {
+        width: auto;
+      }
+
+      @include media($nav-bp) {
+        padding: 1em;
+      }
     }
   }
 
@@ -42,21 +50,6 @@ $nav-bp: new-breakpoint(min-width 900px);
     }
   }
 
-  .inactive {
-    pointer-events: none;
-
-    li {
-      color: $border-gray;
-      padding: .5em;
-    }
-
-    span {
-      font-size: .875em;
-      font-style: italic;
-      text-transform: capitalize;
-    }
-  }
-
   li {
     border: 1px solid $href-teal;
     border-radius: 5px;
@@ -71,7 +64,7 @@ $nav-bp: new-breakpoint(min-width 900px);
       background-color: $white;
       border: 0;
       border-radius: 0;
-      font-size: .9em;
+      font-size: .85em;
       margin: 0;
       width: 33.3%;
 
@@ -109,8 +102,22 @@ $nav-bp: new-breakpoint(min-width 900px);
 
     li {
       padding: .85em .75em .65em .75em;
+
       &:hover {
         background: none;
+      }
+    }
+
+    img {
+      display: none;
+      width: 175px;
+
+      @include media($default-desktop) {
+        display: block;
+      }
+
+      @include media($nav-bp) {
+        width: 200px;
       }
     }
   }
@@ -119,15 +126,18 @@ $nav-bp: new-breakpoint(min-width 900px);
     display: none;
 
     li {
-       position: fixed;
-       padding: .9em .5em;
-       right: 0;
-       top: 0;
-       width: 3em;
+      background: none;
+      padding: .9em .5em;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 3em;
 
        &:hover {
+         background: none;
+
          .fa {
-           color: $white;
+           color: rgba(0, 137, 144, .75);
          }
        }
     }

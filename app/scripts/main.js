@@ -34,13 +34,28 @@ $(window).load(function() {
   $('#main-content').fitVids();
 });
 
+var windowSize;
+$(window).resize(function() {
+    windowSize = $(window).innerWidth();
+    if (windowSize < 601) {
+      $('#menu .social-share').hide();
+    }
+    if (windowSize < 768) {
+      $('#menu .home').hide();
+    }
+});
+
 //sets nav to sticky at certain height
 $(window).scroll(function () {
   var navHeight = $('.masthead .menu-container').height();
   if( $(window).scrollTop() > navHeight && !($('#menu').hasClass('sticky'))){
     $('#menu').addClass('sticky');
-    $('#menu .social-share').show();
-    $('#menu .home').show();
+    if (windowSize > 600) {
+      $('#menu .social-share').show();
+    }
+    if(windowSize > 767) {
+      $('#menu .home').show();
+    }
   } else if ($(window).scrollTop() < navHeight){
     $('#menu').removeClass('sticky');
     $('#menu .social-share').hide();
