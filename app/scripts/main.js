@@ -35,8 +35,16 @@ $(window).load(function() {
 });
 
 var windowSize;
-$(window).resize(function() {
+
+function getWindowSize() {
     windowSize = $(window).innerWidth();
+}
+
+getWindowSize();
+
+$(window).resize(function() {
+    getWindowSize();
+    console.log(windowSize);
     if (windowSize < 601) {
       $('#menu .social-share').hide();
     }
