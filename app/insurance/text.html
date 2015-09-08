@@ -1,0 +1,58 @@
+{% extends "_base-text.html" %}
+
+{% block social_meta %}
+<meta property="og:url" content="http://apps.texastribune.org/paid-to-prosecute/insurance">
+<meta property="og:title" content="{{ META.project_title }}">
+<meta property="og:description" content="{{META.section_3_title}}: {{ INSURANCE.headline }}">
+{% endblock %}
+
+{% block styles %}
+{{ super() }}
+{% endblock %}
+
+{%block nav %}
+  {{ super()}}
+  <a href="{{PATH_PREFIX}}{{META.section_1_slug }}"><li>{{META.section_1_title }}</li></a>
+  <a href="{{PATH_PREFIX}}{{META.section_2_slug }}"><li>{{META.section_2_title }}</li></a>
+  <a href="{{PATH_PREFIX}}{{META.section_3_slug }}"><li class="selected">{{META.section_3_title }}</li></a>
+{% endblock %}
+
+{% block content %}
+  <h2 class="headline">{{ INSURANCE.headline }}</h2>
+  <section class="byline prose">
+    By <a href="http://www.texastribune.org/about/staff/jay-root">Jay Root</a>
+      and <a href="http://www.statesman.com/staff/tony-plohetski/">Tony Plohetski</a>
+    &nbsp;|&nbsp;
+    {{INSURANCE.date }}
+  </section>
+
+  <section class="prose graf first insurance">
+    {{ INSURANCE.text_1 }}
+    {{ INSURANCE.text_2 }}
+    {{ INSURANCE.text_3 }}
+    {{ INSURANCE.text_4 }}
+    {{ INSURANCE.text_5 }}
+  </section>
+
+{% endblock %}
+
+{% block more %}
+<div class="more-story">
+  <a href="{{PATH_PREFIX}}{{ META.section_1_slug }}">
+    <img src="{{PATH_PREFIX}}assets/images/{{ FOOTER.workers_sub_img }}" />
+    <h4>{{ META.section_1_title }}</h4>
+  </a>
+  <p>{{ FOOTER.workers_sub_desc }}</p>
+</div>
+<div class="more-story">
+  <a href="{{PATH_PREFIX}}{{ META.section_2_slug }}">
+    <img src="{{PATH_PREFIX}}assets/images/{{ FOOTER.pros_sub_img }}" />
+    <h4>{{ META.section_2_title }}</h4>
+  </a>
+  <p>{{ FOOTER.pros_sub_desc }}</p>
+</div>
+{% endblock %}
+
+{% block script %}
+{{ super()}}
+{% endblock %}
