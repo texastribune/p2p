@@ -19,18 +19,6 @@
 </head>
 <body>
   <header class="masthead app-bar promote-layer">
-    <!-- <ul id="top-social" class="social">
-      <li>
-        <a href="https://twitter.com/intent/tweet?text={{ META.shareline | urlencode}}%20http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F" title="share on Twitter" class="social-share" target="_blank">
-          <i class="fa fa-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="share" href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fmoose.texastribune.org%2Fpaid-to-prosecute%2F&redirect_uri=http%3A%2F%2Fmoose.texastribune.org%2Fpaid-to-prosecute%2F" title="share on Facebook" class="social-share" target="_blank">
-          <i class="fa fa-facebook"></i>
-        </a>
-      </li>
-    </ul> -->
     <div class="container menu-container">
       <div class="branding">
         <a href="//www.texastribune.org/"><img class="trib-logo desktop" alt="The Texas Tribune" src="http://s3.amazonaws.com/apps.texastribune.org/branding/TxTrib-logo-white500x55.png"></a>
@@ -38,61 +26,10 @@
         <a href="//www.statesman.com"><img class="statesman-logo desktop" alt="The Austin American-Statesman" src="{{ PATH_PREFIX }}assets/images/statesman-logo.svg" data-fallback="{{ PATH_PREFIX }}assets/images/statesman-logo.png"></a>
       </div>
     </div>
-    <!-- <nav id="menu" class="menu">
-      <ul>
-        <a class="home" href="//www.texastribune.org">
-          <li><img width="200" src="https://s3.amazonaws.com/static.texastribune.org/common/images/logo.png"></li>
-        </a>
-        {% block nav %}{% endblock %}
-        <a href="https://twitter.com/intent/tweet?text={{ META.shareline | urlencode}}%20http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F" title="share on Twitter" class="social-share" target="_blank">
-          <li class="twitter">
-            <i class="fa fa-twitter"></i>
-          </li>
-        </a>
-        <a href="https://www.facebook.com/dialog/share?app_id=154122474650943&display=popup&href=http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F&redirect_uri=http%3A%2F%2Fapps.texastribune.org%2Fpaid-to-prosecute%2F" title="share on Facebook" class="social-share" target="_blank">
-          <li class="facebook">
-            <i class="fa fa-facebook"></i>
-          </li>
-        </a>
-      </ul>
-    </nav> -->
   </header>
-
-  <div class="logo">
-    <img src="{{ PATH_PREFIX }}assets/images/p2p-logo.svg" data-fallback="{{ PATH_PREFIX }}assets/images/p2p-logo.png">
-  </div>
-
-  <div id="main-content" class="story-container">
-    {% block content %}{% endblock %}
-  </div>
-
-  <!-- <div class="ad-container banner-ad bottom" id="div-gpt-ad-1406570316312-2">
-    <script>
-      googletag.cmd.push(function() {
-        googletag.display('div-gpt-ad-1406570316312-2');
-      });
-    </script>
-  </div>
-
-  <div class="story-container comments" id="disqus_thread"></div>
-  <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES * * */
-      var disqus_shortname = 'texastribune';
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 
   <div class="story-container">
     <div class="story-content prose info">
-      <!-- <h3>More in this series</h3>
-      <div class="more">
-          {% block more %}{% endblock %}
-      </div> -->
       <h3>About</h3>
       {{ FOOTER.about }}
     </div>
