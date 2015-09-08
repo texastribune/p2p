@@ -76,17 +76,20 @@
       <h3>Case Studies</h3>
     </div>
     <div class="caption">{{ CARDS.cards_intro }}</div>
-    <a class="half ghost-button open-popup-link" href="#card1">{{ CARDS.card1_title }}</a>
-    <a class="half ghost-button open-popup-link" href="#card2">{{ CARDS.card2_title }}</a>
-    <a class="half ghost-button open-popup-link" href="#card3">{{ CARDS.card3_title }}</a>
-    <a class="half ghost-button open-popup-link" href="#card4">{{ CARDS.card4_title }}</a>
+    <div class="gallery">
+      <a class="half ghost-button" href="#card1">{{ CARDS.card1_title }}</a>
+      <a class="half ghost-button" href="#card2">{{ CARDS.card2_title }}</a>
+      <a class="half ghost-button" href="#card3">{{ CARDS.card3_title }}</a>
+      <a class="half ghost-button" href="#card4">{{ CARDS.card4_title }}</a>
+    </div>
     <!-- Lightbox content -->
     <div id="card1" class="white-popup mfp-hide zoom-anim-dialog">
       <div class="case-summary">
         <div class="summary-head">
             <img class="folder" src="{{PATH_PREFIX}}assets/images/folder.png">
-            <h2>{{ CARDS.card1_title }}</h2>
+            <h2>Case Studies</h2>
           </div>
+          <h3>{{ CARDS.card1_title }}</h3>
           {{ CARDS.card1 }}
       </div>
     </div>
@@ -94,8 +97,9 @@
       <div class="case-summary">
         <div class="summary-head">
             <img class="folder" src="{{PATH_PREFIX}}assets/images/folder.png">
-            <h2>{{ CARDS.card2_title }}</h2>
+            <h2>Case Studies</h2>
           </div>
+          <h3>{{ CARDS.card2_title }}</h3>
           {{ CARDS.card2 }}
       </div>
     </div>
@@ -103,8 +107,9 @@
       <div class="case-summary">
         <div class="summary-head">
             <img class="folder" src="{{PATH_PREFIX}}assets/images/folder.png">
-            <h2>{{ CARDS.card3_title }}</h2>
+            <h2>Case Studies</h2>
           </div>
+          <h3>{{ CARDS.card3_title }}</h3>
           {{ CARDS.card3 }}
       </div>
     </div>
@@ -112,8 +117,9 @@
       <div class="case-summary">
         <div class="summary-head">
             <img class="folder" src="{{PATH_PREFIX}}assets/images/folder.png">
-            <h2>{{ CARDS.card4_title }}</h2>
+            <h2>Case Studies</h2>
           </div>
+          <h3>{{ CARDS.card4_title }}</h3>
           {{ CARDS.card4 }}
       </div>
     </div>
@@ -143,15 +149,18 @@
     <div class="caption">
       {{ PULLOUT.description }}
     </div>
-    <a class="ghost-button open-popup-link" href="#response1">{{ PULLOUT.side1_title }}</a>
-    <a class="ghost-button open-popup-link" href="#response2">{{ PULLOUT.side2_title }}</a>
+    <div class="gallery">
+      <a class="ghost-button" href="#response1">{{ PULLOUT.side1_title }}</a>
+      <a class="ghost-button" href="#response2">{{ PULLOUT.side2_title }}</a>
+    </div>
     <!-- Lightbox content -->
     <div id="response1" class="white-popup mfp-hide zoom-anim-dialog">
       <div class="case-summary">
         <div class="summary-head">
           <img class="folder" src="{{PATH_PREFIX}}assets/images/folder.png">
-          <h2>{{ PULLOUT.side1_title }}</h2>
+          <h2>The Kyees Case: Lawyers Weigh In</h2>
         </div>
+        <h3>{{ PULLOUT.side1_title }}</h3>
         {{ PULLOUT.side1 }}
       </div>
     </div>
@@ -159,8 +168,9 @@
       <div class="case-summary">
         <div class="summary-head">
             <img class="folder" src="{{PATH_PREFIX}}assets/images/folder.png">
-            <h2>{{ PULLOUT.side2_title }}</h2>
+            <h2>The Kyees Case: Lawyers Weigh In</h2>
           </div>
+          <h3>{{ PULLOUT.side2_title }}</h3>
           {{ PULLOUT.side2 }}
       </div>
     </div>

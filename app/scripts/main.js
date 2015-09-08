@@ -18,16 +18,22 @@ $(window).load(function() {
   });
 
   //lightboxes
-  $('.open-popup-link').magnificPopup({
-    type:'inline',
-    fixedContentPos: true,
-		fixedBgPos: true,
-		overflowY: 'auto',
-		closeBtnInside: true,
-		preloader: false,
-		midClick: true,
-		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
+  $('.gallery').each(function() { // the containers for all your galleries
+      $(this).magnificPopup({
+        delegate: 'a',
+        type:'inline',
+        fixedContentPos: true,
+    		fixedBgPos: true,
+    		overflowY: 'auto',
+    		closeBtnInside: true,
+    		preloader: false,
+    		midClick: true,
+    		removalDelay: 300,
+    		mainClass: 'my-mfp-zoom-in',
+        gallery: {
+          enabled: true
+        }
+     });
   });
 
   //fitvids
